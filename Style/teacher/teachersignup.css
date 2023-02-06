@@ -1,0 +1,99 @@
+body{
+    font-family: 'Calibri';
+    background-color: rgb(224, 224, 224);
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 10vh;
+    padding: 8vh;
+    
+}
+
+.main .form{
+    box-shadow: 0 0 10px rgba(109, 109, 109, 0.603);
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: -5vh;
+}
+
+
+
+.main .text p{
+    font-size: 17px;
+    font-size: clamp(0.625rem, -0.5469rem + 3.75vw, 1.5625rem);
+}
+
+.main h3{
+    text-align: center;
+}
+
+.main .img{
+    display: flex;
+    justify-content: center;
+}
+
+.main .img img{
+    width: 150px;
+    margin-bottom: 2vh;
+    display: none;
+}
+
+.main input{
+    width: 250px;
+    padding-left: 30px;
+}
+
+.main .text h1{
+    color: rgb(88,182,192);
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main .text h1 span{
+    color: rgb(122,140,142);
+}
+
+i{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgba(36, 35, 35, 0.877);
+}
+
+@media screen and (min-width: 1200px){
+    .main .img img{
+        width: 150px;
+        margin-bottom: 2vh;
+        display: block;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: wrap;
+        margin-top: 5vh;
+        gap: 10vh;
+        padding: 8vh;
+        margin-top: 13vh;
+    }
+
+    .main .text{
+        margin-top: 15vh;
+    }
+
+    .main .text p{
+        font-size: 17px;
+    }
+}
+@media screen and (min-width: 768px){
+    .main .img img{
+        margin-bottom: 2vh;
+        display: block;
+    }
+}
+

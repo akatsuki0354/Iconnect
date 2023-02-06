@@ -1,0 +1,134 @@
+body{
+    font-family: 'Calibri';
+    background-color: rgb(224, 224, 224);
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+   padding-top: 5vh;
+    gap: 5vh;
+   
+}
+
+hr{
+    color: black;
+    height: 1px;
+    background-color: rgba(151, 151, 151, 0.425);
+}
+
+.main .text p{
+    font-size: 17px;
+    font-size: clamp(0.625rem, -0.5469rem + 3.75vw, 1.5625rem);
+}
+
+.main .text h1{
+    color: rgb(88,182,192);
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+.main .text h1 span{
+    color: rgb(122,140,142);
+}
+
+.main .student h3{
+    text-align: center;
+}
+
+.main .student img{
+    width: 150px;
+    display: none;
+    margin-bottom: 2vh;
+}
+
+.main .student .img{
+    display: flex;
+    justify-content: center;
+}
+
+.main .student .btn{
+    margin-top: 1vh;
+}
+
+.main .student input{
+    width: 250px;
+    padding-left: 30px;
+}
+
+
+.main .student i{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 7px;
+    color: rgba(83, 83, 83, 0.877);
+} 
+
+.main .text img{
+    width: 100px; 
+    height: 100px; 
+    margin-right: 10px;
+}
+
+.main .student{
+    box-shadow: 0 0 10px rgba(109, 109, 109, 0.603);
+     padding: 35px;
+     border-radius: 10px;
+ }
+
+[data-aos] {
+    opacity: 0;
+}
+  
+[data-aos][data-aos-id] {
+    transition: all .10s ease-in-out;
+}
+
+@media screen and (min-width: 1200px){
+    .main .text{
+        margin-top: 20vh;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: wrap;
+        gap: 20vh;
+        padding: 7vh;
+        margin-top: 8vh;
+    }
+
+    .main .student img{
+        width: 150px;
+        margin-bottom: 2vh;
+        display: block;
+    }
+
+    .main .text img{
+        width: 150px; 
+        height: 150px; 
+        margin-right: 10px;
+    }
+
+    .main .text p{
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main .student img{
+        width: 150px;
+        margin-bottom: 2vh;
+        display: block;
+    }
+
+    .main .text img{
+        width: 120px; 
+        height: 120px; 
+        margin-right: 10px;
+    }
+}

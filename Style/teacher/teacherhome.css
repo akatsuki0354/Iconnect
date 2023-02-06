@@ -1,0 +1,66 @@
+.nav-fas{
+    background-color: rgb(7, 150, 150);
+    color: black;
+    padding: 2px;
+    padding-left: 20px;
+    border-radius: 5px;
+  }
+
+  .fas{
+    margin-right: 5px;
+    color: white;
+  }
+
+.user{
+  display: none;
+}
+
+
+
+/* navbar */
+.navbar-nav a{
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 3px;
+}
+
+.navbar-nav a.active{
+  background-color: rgb(31, 31, 31);
+  border-radius: 5px;
+}
+
+.navbar-nav a:hover{
+  background-color: rgb(31, 31, 31);
+  border-radius: 10px;
+}
+
+/*search bar & table */
+
+.main{
+ display: flex;
+}
+
+.table{
+ padding-right: 10px;
+ padding-top: 15px;
+ border-right: solid 1px black;
+
+}
+
+.main .searchbar{
+  padding: 15px;
+  width: 100%;
+}
+
+/* .sticky{
+ 
+  position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    position: absolute;
+    width: 65vh;
+    
+} */
+

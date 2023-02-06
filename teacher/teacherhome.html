@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="/Style/teacher/teacherhome.css">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <Title>ICONnect</Title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <i class="fas fa-user" class="fas"></i>
+    <a class="navbar-brand" id="hh" href="#">ICONnect</a>
+    <ul class="navbar-nav mr-auto">
+      <a href="#" class="active">Manual</a>
+      <a href="QR-Attendance.html" class="">QR-Attendance</a>
+    </ul>
+    <a id="userlink" class="nav-link user" href="">Username</a>
+    <a id="signoutlink" class="nav-link" href="">Signout</a>
+  </nav>
+
+  <div>
+    <h1 style="text-align: center; margin-top: 5v">Manual Attendance</h1>
+  </div>
+  <div class="main">
+    <!-- table -->
+    <div class="table">
+      <table class="table table-bordered table-primary" style="text-align: center; margin-top: 1px;">
+        <tr>
+          <th>Section Name</th>
+          <th>Subject</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>St. Angelo</td>
+          <td>ICT 600</td>
+          <td>7:30 A.M</td>
+        </tr>
+        <tr>
+          <td>St. Bernard</td>
+          <td>IMERSION</td>
+          <td>9:30 P.M</td>
+        </tr>
+      </table>
+    </div>
+    <!-- searchbar -->
+    <div class="searchbar">
+      <a href="" class="btn btn-success" style="margin-bottom: 10px;">Enroll</a>
+      <a href="" class="btn btn-primary" style="margin-bottom: 10px;">Create-QR</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <table class="table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
+        <tr>
+          <th>Full Name</th>
+          <th>Present</th>
+          <th>Absent</th>
+          <th>Excuse</th>
+          <th>Late</th>
+          <th>View info</th>
+        </tr>
+        <tr>
+          <td>Gregorio, Franco, M.</td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><a href="#" class="btn btn-success">View Info</a></td>
+        </tr>
+        <table class="table table-bordered table-primary sticky" style="text-align: center; margin-top: 5px;">
+          <tr>
+            <tbody>
+              <td><a href="#" class="btn btn-success">Save</a></td>
+              <td><a href="" class="btn btn-danger">Cancel</a></td>
+            </tbody>
+          </tr>
+        </table>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="../javascript/teacher/home-teacher.js"></script>
+</body>
+
+</html>

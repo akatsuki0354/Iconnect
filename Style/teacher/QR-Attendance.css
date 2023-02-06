@@ -1,0 +1,9 @@
+.main-qr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 50px;
+    margin-top: 5vh;
+    text-align: center;
+}

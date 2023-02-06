@@ -1,0 +1,68 @@
+.nav-fas {
+  background-color: rgb(7, 150, 150);
+  color: black;
+  padding: 2px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+.fas {
+  margin-right: 5px;
+  color: white;
+}
+
+.user {
+  display: none;
+}
+
+/* main alert */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 50px;
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.main .alert {
+  width: 250px;
+}
+
+
+
+
+/* generator */
+#placeHolder {
+  display: none;
+}
+
+canvas {
+  width: 210px;
+}
+
+#dBtn {
+  display: none;
+}
+
+.container {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.qr-box {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.container {
+  position: relative;
+  margin-top: 20px;
+}
+
+#nav a {
+  margin-left: 10px;
+  border-radius: 10px;
+}

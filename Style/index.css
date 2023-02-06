@@ -1,0 +1,145 @@
+body{
+    font-family: 'Calibri';
+    background-color: rgb(224, 224, 224);
+}
+
+@font-face{
+    font-family: 'Univewrsity';
+    src: url('/font/University.otf');
+}
+
+.choose{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 8vh;
+    margin-top: 18vh;
+    text-align: center;
+}
+
+.alert{
+    margin-bottom: 0;
+}
+
+.title h1{
+    text-align: center;
+    margin-top: 5vh;
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(88,182,192);
+
+
+}
+
+.title h1 span{
+    color: rgb(122,140,142);
+}
+
+.choose .student img{
+    width: 100px;    
+}
+
+.choose .teacher img{
+    width: 100px;
+}
+
+.choose .student h3{
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px;
+    font-size: clamp(1.125rem, 0.1875rem + 3vw, 1.875rem);
+}
+
+.choose .teacher h3{
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px;
+    font-size: clamp(1.125rem, 0.1875rem + 3vw, 1.875rem);
+}
+
+.warning{
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    font-size: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+  
+}
+
+.warning p{
+    font-size: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+}
+
+.warning h2 span{
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(88,182,192);
+}
+
+.warning h2 span .nect{
+    color: rgb(122,140,142);
+}
+.warning p a{
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.warning h2{
+  font-size: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+}
+
+.warning h4{
+  font-size: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+}
+
+.main .ICONnect .title img{
+    width: 70px;
+}
+
+@media screen and (min-width:  600px) {
+    .choose{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: wrap;
+        gap: 100px;
+        text-align: center;
+        margin-top: 10vh;
+    }
+
+    .choose .student{
+        width: 300px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+    
+    .choose .student img{
+        width: 230px;
+        
+    }
+
+    .choose .teacher img{
+        width: 230px;
+        
+    }
+    
+    .choose .teacher{
+        width: 300px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .main .ICONnect .title img{
+        width: 100px;
+
+    }
+
+
+}

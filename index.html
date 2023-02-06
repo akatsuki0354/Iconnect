@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/yuk6rfn.css">
+    <link rel="stylesheet" href="Style/loader.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>ICONnnect</title>
+</head>
+<body>
+    <div id="preloader">
+        <div class="container">
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="ICONnect" data-aos-delay="2200" data-aos="zoom-in">
+            <div class="title">
+                <h1>
+                    <img src="/img/icon.png" alt="">
+                    ICON<span>nect</span>
+                </h1>
+            </div>
+            <div class="choose">
+                <div class="student">
+                    <div>
+                        <a href="Student/studentlogin.html">
+                            <img class="student__img" src="img/students.png" alt="student__img"></a>
+                        <h3>STUDENT</h3>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div>
+                        <a href="/teacher/teacherlogin.html">
+                            <img src="img/teachers.png" alt="teacher__img" class="teacher__img">
+                        </a>
+                    </div>
+                    <h3>TEACHER</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="warning alert alert-info">
+            <h2>Welcome! To <span>ICON<span class="nect">nect</span></span></h2>
+            <h4>Please click the icon if you are a Student or Teacher</h4>
+            <p>CREDITS 2022 ©: <a href="">ICONnect</a></p>
+        </div>
+        <script>
+            window.onload = function () {
+                var preloader = document.getElementById("preloader");
+                setTimeout(function () {
+                    preloader.style.opacity = 0;
+                }, 3000);
+                setTimeout(function () {
+                    preloader.style.display = "none";
+                }, 3000);
+            }
+        </script>
+
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>
