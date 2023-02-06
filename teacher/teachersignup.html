@@ -13,6 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/img/icon.png">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/javascript/password.js"></script>
     <title>ICONnnect</title>
 </head>
 <body>
@@ -41,6 +42,9 @@
                 <i class="fa fa-envelope icon" style="font-size:20px; margin-top: 9px;"></i>
                 <input type="text" placeholder="Email" id="emailInp" class="form-control mb-3">
                 <i class="fa fa-lock icon" style="font-size:26px"></i>
+                <div onclick="Trigger()" class="icon-container">
+                    <i id="arrow" class="fa fa-eye-slash" style="margin-left: 220px; font-size: 20px;"></i>
+                </div>
                 <input type="password" placeholder="Password" id="passInp" class="form-control mb-3">
                 <button type="text" id="submit" class="btn btn-info mb-3">Sign Up</button>
                 <a href="/teacher/teacherlogin.html" class="text-info">I Have account?</a>

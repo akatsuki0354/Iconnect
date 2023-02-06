@@ -14,6 +14,7 @@
     <script src="/javascript/student/studentsignin.js" type="module"></script>
     <link rel="stylesheet" href="../Style/student/studentlogin.css">
     <link rel="stylesheet" href="https://use.typekit.net/yuk6rfn.css">
+    <script src="/javascript/password.js"></script>
     <title>ICONnnect</title>
 </head>
 <body>
@@ -36,6 +37,9 @@
             <h3>Student Sign In</h3>
             <i class="fa fa-user icon" style="font-size:25px;"></i>
             <input type="text" placeholder="Student No." id="usernameInp" class="form-control mb-3">
+            <div onclick="Trigger()" class="icon-container">
+                <i id="arrow" class="fa fa-eye-slash" style="margin-left: 220px; font-size: 20px;"></i>
+            </div>
             <i class="fa fa-lock icon" style="font-size:25px;"></i>
             <input type="Password" placeholder="Password" id="passInp" class="form-control mb-3">
             <div class=" custom-control custom-switch">
