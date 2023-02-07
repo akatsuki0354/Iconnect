@@ -3,7 +3,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
 import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyD1GxCsUNfVYuE8vq5Z9u3kj8dHFval7Hc",
   authDomain: "firestore-9d6f3.firebaseapp.com",
@@ -19,7 +25,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getDatabase();
-
+const auth = getAuth();
 
 //  Reference
 
@@ -40,6 +46,8 @@ function Validation(){
    let nameregex = /^[a-zA-Z\s]+$/;
    let emailgerex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
    let stdNoregex = /[a-zA-Z0-9]{5,}/;
+   let passwordregex = /[a-zA-Z0-9]{8,}/;
+
 
 
    if(isEmptyOrSpaces(name.value) || isEmptyOrSpaces(email.value) || isEmptyOrSpaces(stdNo.value) || isEmptyOrSpaces(password.value)){
@@ -57,9 +65,13 @@ function Validation(){
        return false;
    }
    if(!stdNoregex.test(name.value)){
-       alert("user");
+       alert("need atlest 5 character");
        return false;
    }
+   if(!passwordregex.test(password.value)){
+    alert("need atleast 8 character");
+    return false;
+}
 
    return true;
 
@@ -70,7 +82,31 @@ function Validation(){
 function RegisterUser(){
   if(!Validation()){
    return;
-  };
+  }
+//   Auth
+createUserWithEmailAndPassword(auth, email.value, password.value)
+.then((userCredential) => {
+    const user = userCredential.user;
+  // Add the user to the database
+  const dbRef = ref(db);
+  set(ref(dbRef, "StudentList/" + stdNo.value), {
+    name: name.value,
+    email: email.value,
+    stdNo: stdNo.value,
+    password: encPass(),
+  })
+    .then(() => {
+      alert("Hello! You are now registered Mr/Mrs " + name.value);
+    })
+    .catch((error) => {
+    //   alert("Error: " + error);
+    });
+})
+.catch((error) => {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+//   alert("Error: " + errorMessage);
+});
    const dbRef = ref(db);
    
    get(child(dbRef, "StudentList/" + stdNo.value))
@@ -103,3 +139,4 @@ function encPass(){
 
 
 submit.addEventListener('click', RegisterUser);
+
