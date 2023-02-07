@@ -1,0 +1,25 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.main .input{
+    margin-top: 5vh;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(97, 97, 97, 0.438);
+}
+
+.main .input .button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main .input .button a{
+    margin-top: 7px;
+}
+
+
