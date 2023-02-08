@@ -45,19 +45,17 @@ body{
     width: 100px;
 }
 
-.choose .student h3{
+.choose .student a{
     font-family: "cooper-black-std", serif;
     font-weight: 400;
     font-style: normal;
-    margin-top: 20px;
     font-size: clamp(1.125rem, 0.1875rem + 3vw, 1.875rem);
 }
 
-.choose .teacher h3{
+.choose .teacher a{
     font-family: "cooper-black-std", serif;
     font-weight: 400;
     font-style: normal;
-    margin-top: 20px;
     font-size: clamp(1.125rem, 0.1875rem + 3vw, 1.875rem);
 }
 
@@ -113,9 +111,9 @@ body{
         flex-direction: row;
         justify-content: center;
         flex-flow: wrap;
-        gap: 100px;
+        gap: 30px;
         text-align: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 
     .choose .student{
@@ -125,12 +123,12 @@ body{
     }
     
     .choose .student img{
-        width: 230px;
+        width: 200px;
         
     }
 
     .choose .teacher img{
-        width: 230px;
+        width: 200px;
         
     }
     
