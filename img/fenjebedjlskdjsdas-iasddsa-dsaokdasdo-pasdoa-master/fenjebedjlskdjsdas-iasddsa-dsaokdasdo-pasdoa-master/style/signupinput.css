@@ -1,0 +1,33 @@
+
+.signup i {
+    position: absolute;
+}
+  
+.signup {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 7px;
+    min-width: 40px;
+}
+  
+input {
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 3px;
+}
+
+i{
+    margin-top: 25px;
+    color: rgb(114, 114, 114);
+}
+
+.signup-main button{
+    margin-top: 10px;
+}
+
+
+  
+

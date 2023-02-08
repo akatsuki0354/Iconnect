@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="style/loader.css">
+    <link rel="stylesheet" href="style/signup.css">
+    <link rel="stylesheet" href="style/gettingstarted.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RQ-System</title>
+</head>
+<body>
+  
+    <div class="main" >
+        <div id="preloader">
+            <div class="status" id="status"> 
+            </div>
+        </div>
+        
+    <div class="GettingStarted" data-aos-delay="1700" data-aos="zoom-in">
+        <div class="logo" data-aos-delay="1700" data-aos="zoom-in">
+            <img src="img/rqslogo.png" alt="logo">
+        </div>
+        <div class="title">
+            <h1 style="font-family: prototype; margin-bottom: -5px;">RQ-System</h1>
+            <p>Welcome to <span>RQ-System </span>This Website is for Student
+            in ICP who <br> wan't to Request Form in Easy Way</p>
+        </div>
+        <div class="start">
+            <a href="signin.html"><button  class="button">Getting Started</button></a>
+        </div>
+       
+         </div>
+         <div class="crdts">
+            <p> Copyright ⓒ 2022 <a href="crdts.html">Team RQ-System</a> All rights reserved.</p>
+          
+        </div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            var preloader = document.getElementById("preloader");
+            setTimeout(function(){
+                preloader.style.opacity = 0;
+            }, 2000);
+            setTimeout(function(){
+                preloader.style.display = "none";
+            }, 4000);
+        }
+
+       
+    </script>
+
+<script>
+    AOS.init();
+  </script>
+
+  <style>
+    .logo{
+            display: flex;
+            justify-content: center;
+            margin-top: 17vh;
+            position: relative;
+            margin-left: -60px;
+            margin-bottom: -28vh;
+        }
+
+    .crdts{
+        margin-top: 42vh;
+        text-align: center;
+    }
+
+    .crdts a{
+        color: rgb(53, 89, 165);
+    }
+
+   .GettingStarted{
+    margin-top: 23vh;
+    margin-bottom: -100px;
+   }
+  </style>
+</body>
+</html>
