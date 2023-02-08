@@ -35,7 +35,7 @@ function AuthenticateUser(){
 const dbRef = ref(db);
 
 
-get(child(dbRef, "Studentlist/" + stdNo.value))
+get(child(dbRef, "teacherlist/" + stdNo.value))
    .then((snapshot)=>{
        if(snapshot.exists()){
         alert()
