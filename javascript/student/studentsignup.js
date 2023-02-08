@@ -89,7 +89,7 @@ createUserWithEmailAndPassword(auth, email.value, password.value)
     const user = userCredential.user;
   // Add the user to the database
   const dbRef = ref(db);
-  set(ref(dbRef, "StudentList/" + stdNo.value), {
+  set(ref(dbRef, "Studentlist/" + stdNo.value), {
     name: name.value,
     email: email.value,
     stdNo: stdNo.value,
@@ -109,13 +109,13 @@ createUserWithEmailAndPassword(auth, email.value, password.value)
 });
    const dbRef = ref(db);
    
-   get(child(dbRef, "StudentList/" + stdNo.value))
+   get(child(dbRef, "Studentlist/" + stdNo.value))
    .then((snapshot)=>{
        if(snapshot.exists()){
            alert("account already exist");
        }
        else{
-           set(ref(db, "StudentList/"+ stdNo.value),
+           set(ref(db, "Studentlist/"+ stdNo.value),
            {
                name: name.value,
                email: email.value,
