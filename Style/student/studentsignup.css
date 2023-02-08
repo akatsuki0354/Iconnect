@@ -2,6 +2,16 @@ body{
     font-family: 'Calibri';
     background-color: rgb(224, 224, 224);
 }
+
+.alert{
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    margin: 0;
+}
 .main{
     display: flex;
     flex-direction: row;
@@ -11,7 +21,7 @@ body{
     gap: 10vh;
 }
 
-.main .form{
+.main .contain{
     box-shadow: 0 0 10px rgba(109, 109, 109, 0.603);
     border-radius: 10px;
     padding: 40px;
@@ -72,7 +82,7 @@ i{
         flex-direction: row;
         justify-content: center;
         flex-flow: wrap;
-        gap: 10vh;
+        gap: 20vh;
         padding: 5vh;
     }
 
@@ -91,14 +101,11 @@ i{
 
 @media screen and (min-width: 1200px) {
     .main{
-        display: flex;
+        display: block;
         flex-direction: row;
         justify-content: center;
         flex-flow: wrap;
-        margin-top: 5vh;
-        gap: 10vh;
-        padding: 8vh;
-        margin-top: 13vh;
+     
     } 
 
     .main .text img{
@@ -107,8 +114,16 @@ i{
         margin-right: 10px;
     }
 
-     .main .text{
-        margin-top: 15vh;
+    .main .text h1{
+       margin-top: 35px;
+    }
+  
+    .main .form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: wrap;
+        margin-top: 10vh;
     }
 
     .main .text p{

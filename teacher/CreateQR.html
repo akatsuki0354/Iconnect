@@ -34,7 +34,8 @@
         <a id="signoutlink" class="nav-link" href="">Signout</a>
       </nav>
     <div class="main">
-        <div class="qr-box alert alert-info" id="qrgenerator">
+        <div class="qr-box alert alert-info" id="qrgenerator" style="width: 40%;">
+          <h3>Create QR</h3>
             <div>
               <label for="usr" class="text-dark"></label>
               <br>
@@ -43,8 +44,9 @@
               <input type="text" class="form-control" id="StudentNo" name="username" placeholder="Student No" >
               <br>
               <input type="text" class="form-control" id="CellphoneNo" name="username" placeholder="CellphoneNo" >
-              <div class="btn" style="display: flex; justify-content: center;">
-                <a href="javascript:void(0)" class="btn btn-primary btn-lg my-4" onclick="generate();"> View Qr-code </a>
+              <div class="btn" style="display: flex; justify-content: center; gap: 50px; ">
+                <a href="javascript:void(0)" class="btn btn-primary btn-lg my-4" onclick="generate();">Create-QR</a>
+                <a style="margin-top: 35px;" href="/teacher/teacherView-Attendance.html">Back to Qr attendance?</a>
               </div>
             </div>
           </div>
