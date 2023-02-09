@@ -3,7 +3,9 @@ function generate(){
     var errorCorrectionLevel = 'L';  
     var qr = qrcode(typeNumber, errorCorrectionLevel);  
     var inputText = document.getElementById('text').value;  
-    qr.addData(inputText);  
+    var studentNo = document.getElementById('studentNo').value;  
+    qr.addData(inputText);
+    qr.addData(studentNo);
     qr.make();  
     document.getElementById('placeHolder').innerHTML = qr.createImgTag();  
     canvasScreen();  
