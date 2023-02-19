@@ -1,6 +1,5 @@
 .card {
-    width: 440px;
-    height: 150px;
+   width: 40%;
     background: whitesmoke;
     transition: .2s linear;
     box-shadow: 1px 1px 10px lightslategray;
@@ -124,6 +123,6 @@ text-decoration: none;
     justify-content: center;
     flex-flow: wrap;
     gap: 30px;
-    text-align: center;
+  
     margin-top: 15vh;
 }
