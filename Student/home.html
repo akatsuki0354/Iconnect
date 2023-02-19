@@ -17,6 +17,7 @@
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"> </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <Title>ICONnect</Title>
 </head>
 <body>
@@ -26,6 +27,7 @@
     <ul class="navbar-nav mr-auto">
       <a href="home.html" class="btn btn-dark">Home</a>
     </ul>
+    
     <a id="userlink" class="nav-link user" href="">Username</a>
     <a id="signoutlink" class="nav-link" href="">Signout</a>
   </nav>
@@ -49,14 +51,43 @@
       <div class="btn" style="display: flex; justify-content: center;">
         <a href="#" class="btn btn-danger btn-lg my-4" onclick="downloadQrCode(this);" download="QRcode.png"> Download
         </a>
+       
       </div>
     </div>
   </div>
 
-  
+<style>
+  .excuese{
+    position: absolute;
+    top: 0;
+    margin-top: 10vh;
+    padding: 10px;
+    width: 220px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .excuese div{
+    display: flex;
+    justify-content: center;
+  }
+
+</style>
+
+  <div class="excuese">
+    <label for="">Upload Your excuse letter:</label>
+    <br>
+   <div>
+    <label class="btn btn-info" for="files">Upload</label>
+   </div>
+    <input type="file" class="hidden" id="files">
+  </div>
+
   <div class="main">
 
-   
+    
     <div class="alert alert-info">
       <p>Teacher Name: Grace Poe</p>
       <p>Subject: ICT 1200</p>
