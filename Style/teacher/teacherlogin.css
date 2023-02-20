@@ -12,6 +12,12 @@ body{
    
 }
 
+.main .text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
 hr{
     color: black;
     height: 1px;
@@ -141,6 +147,8 @@ hr{
         margin-bottom: 2vh;
         display: block;
     }
+
+    
 
     .main .student{
         display: flex;

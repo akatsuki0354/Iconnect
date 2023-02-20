@@ -31,28 +31,37 @@ const submit = document.getElementById('submit');
 
 // AuthenticatorAttestationResponse
 
-function AuthenticateUser(){
-const dbRef = ref(db);
+function AuthenticateUser() {
+    const dbRef = ref(db);
 
+    let passwordregex = /[a-zA-Z0-9]{8,}/;
+    let stdNoregex = /[a-zA-Z0-9]{5,}/;
 
-get(child(dbRef, "teacherlist/" + stdNo.value))
-   .then((snapshot)=>{
-       if(snapshot.exists()){
-        alert()
-           let dbpass = decPass(snapshot.val().password);
-           if(dbpass == password.value){
-            login(snapshot.val());
-           }
-           else{
-             alert("username or password invalid");
-           }
-       }
+    // Validate username and password input
+    if (!stdNoregex.test(stdNo.value)) {
+        alert("Please enter a valid username (minimum 5 characters, alphanumeric only).");
+        return;
+    }
+    if (!passwordregex.test(password.value)) {
+        alert("Please enter a valid password (minimum 8 characters, alphanumeric only).");
+        return;
+    }
 
-       else{
-            alert("username or password invalid");
-           }
-      
-    });
+    get(child(dbRef, "teacherlist/" + stdNo.value))
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+                let dbpass = decPass(snapshot.val().password);
+                if (dbpass == password.value) {
+                    login(snapshot.val());
+                }
+                else {
+                    alert("Invalid username or password.");
+                }
+            }
+            else {
+                alert("Invalid username or password.");
+            }
+        });
 }
 
 function decPass(dbpass){
