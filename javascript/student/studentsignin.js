@@ -39,11 +39,11 @@ function AuthenticateUser() {
 
     // Validate username and password input
     if (!stdNoregex.test(stdNo.value)) {
-        alert("Please enter a valid username (minimum 5 characters, alphanumeric only).");
+        alert("Please enter a valid username (minimum 5 characters).");
         return;
     }
     if (!passwordregex.test(password.value)) {
-        alert("Please enter a valid password (minimum 8 characters, alphanumeric only).");
+        alert("Please enter a valid password (minimum 8 characters).");
         return;
     }
 
