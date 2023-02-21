@@ -3,23 +3,22 @@
     justify-content: center;
 }
 
+.main .input .title{
+    padding: 1px;
+    padding-top: 10px;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    width: 450px;
+}
+
 .main .input{
-    margin-top: 5vh;
-    width: 300px;
+    margin-top: 20vh;
+}
+
+.main .input .form{
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow:  0 0 10px rgba(97, 97, 97, 0.438);
+    border-radius: 0 0 10px 10px;
 }
 
-.main .input .button{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.main .input .button a{
-    margin-top: 7px;
-}
 
 

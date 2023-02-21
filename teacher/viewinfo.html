@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="/Style/teacher/teacherhome.css">
+  <link rel="stylesheet" href="/Style/teacher/view-info.css">
+  <link rel="icon" type="image/x-icon" href="/img/icon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <Title>ICONnect</Title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <i class="fas fa-user" class="fas"></i>
+    <a class="navbar-brand" id="hh" href="#">ICONnect</a>
+    <ul class="navbar-nav mr-auto">
+      <a href="/teacher/teacherhome.html" class="">Manual</a>
+      <a href="/teacher/QR-Attendance.html" >QR-Attendance</a>
+    </ul>
+    <a id="userlink" class="nav-link user" href="">Username</a>
+  <!-- <a href="/teacher/Message.html">  <i class="material-icons" style="font-size:36px; color: rgb(231, 231, 231); cursor: pointer; margin-right: 10px;">message</i></a> -->
+    <a id="signoutlink" class="nav-link" href="">Signout</a>
+  </nav>
+
+  <div class="main">
+    <div class="info-form">
+        <div class="info-title bg bg-info">
+            <h1>Student Information</h1>
+        </div>
+        <div class="input-form alert alert-primary">
+            <input type="text" placeholder="Full Name" value="Franco M. Gregorio" class="form-control mb-3">
+            <input type="text" placeholder="Student No" value="ICP-0525-2021" class="form-control mb-3">
+            <input type="text" placeholder="Email" value="francogregorio2004@gmail.co" class="form-control mb-3">
+            <div class="btn">
+                <button class="btn btn-success">Present: 0</button>
+                <button class="btn btn-primary">Excuse: 0</button>
+                <button class="btn btn-warning">late: 0</button>
+                <button class="btn btn-danger">absent: 0</button>
+                <button class="btn btn-info">total: 0</button>
+            </div>
+           <div class="button">
+            <br>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-success">Save</button>
+           </div>
+        </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script src="/javascript/teacher/home-teacher.js"></script>
+</body>
+
+</html>
