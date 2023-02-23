@@ -71,17 +71,21 @@ function decPass(dbpass) {
 
 // LOGIN
 
+
 function login(user) {
     let keepLoggedIn = document.getElementById('customSwitch1').checked;
     if (!keepLoggedIn) {
         sessionStorage.setItem('user', JSON.stringify(user));
         window.location = "teacherhome.html";
+
     }
+
     else {
         localStorage.setItem('KeepLogin', 'yes');
         localStorage.setItem('user', JSON.stringify(user));
         window.location = "teacherhome.html";
     }
+    
 }
 
 submit.addEventListener('click', AuthenticateUser);

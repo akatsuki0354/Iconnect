@@ -28,7 +28,7 @@
 
 .navbar-nav a.active{
   background-color: rgb(31, 31, 31);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .navbar-nav a:hover{
