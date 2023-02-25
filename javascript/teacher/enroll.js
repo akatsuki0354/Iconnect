@@ -22,9 +22,44 @@
    const studentC = document.getElementById("create")
    const button = document.getElementById('button')
 
+   function validateForm() {
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const studentC = document.getElementById("create");
+  
+    const emailRegex = /^[a-zA-Z0-9]{5,}$/;
+    const passwordRegex = /^[a-zA-Z0-9]{5,}$/;
+  
+    let isValid = true;
+  
+    if (!emailRegex.test(email.value)) {
+      email.classList.add("invalid");
+      isValid = false;
+    }
+  
+    if (!passwordRegex.test(password.value)) {
+      password.classList.add("invalid");
+      isValid = false;
+    }
+  
+    if (studentC.value.length < 5) {
+      studentC.classList.add("invalid");
+      isValid = false;
+    }
+  
+    if (!isValid) {
+      alert("Please enter valid input");
+      return false;
+    }
+  
+    return true;
+  }
    
    
    function addButton(){
+    if(!validateForm()){
+      return;
+     }
    const db = getDatabase();
    update(ref(db, 'teacherlist/' + studentC.value + password.value), {
      fullname: email.value,
@@ -86,7 +121,7 @@ window.onload = function () {
         studentC.value = currentUser.stdNo;
         userlink.classList.replace("nav-link", "btn");
         userlink.classList.add("btn-primary");
-        userlink.href = "profile.html";
+        // userlink.href = "profile.html";
 
 
 

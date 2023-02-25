@@ -14,162 +14,212 @@
   <Title>ICONnect</Title>
 </head>
 
+<style>
+ 
+</style>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <i class="fas fa-user" class="fas"></i>
-    <a class="navbar-brand" id="hh" href="#">ICONnect</a>
-    <ul class="navbar-nav mr-auto">
-      <a href="#" class="active">Manual</a>
-      <a href="QR-Attendance.html" class="">QR-Attendance</a>
-    </ul>
-    <!-- <a href="/teacher/Message.html">  <i class="material-icons" style="font-size:36px; color: rgb(231, 231, 231); cursor: pointer; margin-right: 10px;">message</i></a> -->
-    <a id="userlink" class="nav-link user" href="">Username</a>
-    <i class="fa fa-money" aria-hidden="true"></i>
-    <a id="signoutlink" class="nav-link" href="">Signout</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
+    <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
+      <div class="img-logo" style="display: flex;">
+        <img src="/img/ico.png" alt="" style="width: 70px; height: 70px;">
+       <div>
+        <h1 >ICONnect</h1>
+        <p style="margin-top: -15px;">QR-Monitoring System</p>
+       </div>
+      </div>
+    </div>
+
+    <div class="homepage" style="display: flex; justify-content: center;">
+      <a href="/teacher/teacherhome.html" class="active btn btn-dark">Manual</a>
+      <a href="QR-Attendance.html" class="btn btn-dark">QR-Attendance</a>
+     </div>
+ <div style="display: flex;">
+    <h4  id="name" href="#" style="color: white; margin-right: 10px; margin-top: 20px;">ICONnect</h4>
+    <div  style="width: 60px; height: 60px; text-align: center; border-radius: 100px;  cursor: pointer; background-color: #ddd;"><p style="margin-top: 20px;">profile</p> </div>
+    <!-- drop down -->
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <div class="dropdown-content">  
+        <a  id="hh" href="#">ICONnect</a>
+        <hr>
+        <a id="userlink" style="display: none;" class="nav-link user" href="">Username</a>
+        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+        <a href="/teacher/settings.html">settings</a>
+      
+        <a id="signoutlink" class="nav-link" href="">Signout</a>
+      </div>
+    </div>
+ </div>
+   
   </nav>
 
-  <div>
-    <h1 style="text-align: center; margin-top: 5v" class="text text-info">Manual Attendance</h1>
-  </div>
+ <div class="day">
+  <button class="btn btn-success" style="margin-left: 10px; position: absolute; top: 0; margin-top: 120px;">Monday</button>
+</div>
+<h1 style="text-align: center;" class="text text-info">Manual Attendance</h1>
   <div class="main">
     <!-- table -->
-    <div class="table">
+    
+    <div class="table section">
       <table class="table table-bordered table-primary" style="text-align: center; margin-top: 1px;">
         <tr>
           <th>Section Name</th>
           <th>Subject</th>
-          <th>Time</th>
+          <th>TimeIn - Time Out</th>
         </tr>
-        <tr onclick="tableClick()">
+        <tr class="hover" onclick="tableClick()">
           <td>St. Angelo</td>
           <td>ICT 600</td>
-          <td>7:30 A.M</td>
+          <td>7:30 A.M - 8:30 A.M</td>
         </tr>
-        <tr onclick="tableClicks()">
+        <tr class="hover" onclick="tableClicks()">
           <td>St.Bernardin</td>
           <td>ICT 600</td>
-          <td>7:30 A.M</td>
+          <td>8:30 A.M - 9:30 A.M</td>
         </tr>
-
       </table>
-    </div>
-    <!-- searchbar -->
+    </div><!-- searchbar -->
     <div class="searchbar">
-     <div style="display: flex; gap: 5px;">
-      <a href="/teacher/enroll.html" class="btn btn-success" style="margin-bottom: 10px; width: 80px; height: 40px;">Enroll</a>
-      <a href="/teacher/CreateQR.html" class="btn btn-primary" style="margin-bottom: 10px; width: 100px; height: 40px;">Create-QR</a>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" style="width: 42vh;" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" style="height: 40px;" type="submit">Search</button>
-      </form>
-     </div>
+      <div style="display: flex; gap: 5px;">
+        <a href="/teacher/enroll.html" class="btn btn-success"
+          style="margin-bottom: 10px; width: 80px; height: 40px;">Enroll</a>
+        <a href="/teacher/CreateQR.html" class="btn btn-primary"
+          style="margin-bottom: 10px; width: 120px; height: 40px;">Create-QR</a>
+          <a href="" class="btn btn-info"
+          style="margin-bottom: 10px; width: 100px; height: 40px;">Schedule</a>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" style="width: 30vh;" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" style="height: 40px;" type="submit">Search</button>
+        </form>
+      </div>
 
-     <script>
-      function tableClick(){
-       const text = document.getElementById("hello")
+      <script>
+        function tableClick() {
+          const text = document.getElementById("hello")
 
-       if(text.classList.contains('none')){
-          text.classList.remove('none')
-          text.classList.add('block')
-       }
-       else{
-          text.classList.remove('block')
-          text.classList.add('none')
-       }
-      
-      }
+          if (text.classList.contains('none')) {
+            text.classList.remove('none')
+            text.classList.add('block')
+          }
+          else {
+            text.classList.remove('block')
+            text.classList.add('none')
+          }
+
+        }
 
 
-      function tableClicks(){
-       const text = document.getElementById("hi")
+        function tableClicks() {
+          const text = document.getElementById("hi")
 
-       if(text.classList.contains('none')){
-          text.classList.remove('none')
-          text.classList.add('block')
-       }
-       else{
-          text.classList.remove('block')
-          text.classList.add('none')
-       }
-      
-      }
-  </script>
+          if (text.classList.contains('none')) {
+            text.classList.remove('none')
+            text.classList.add('block')
+          }
+          else {
+            text.classList.remove('block')
+            text.classList.add('none')
+          }
 
-  <style>
-    .none{
-      display: none;
-    }
+        }
+      </script>
 
-    .block{
-      display: block;
-    
-    }
-  </style>
-<div class="none" id="hello">
-      <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
-        <div  class="mt-3">
-          <thead>
-            <h1>St.Angelo</h1>
-          	<th>Full Name</th>
-           <th>Present</th>
-           <th>Absent</th>
-          <th>late</th>
-        <th>Excuse
-         
-        </th>
-        <th>View Info</th>
-          </thead>
-          <tbody  id="child"></tbody>
-        </div>
-        <tr>
-          <td>Gregorio, Franco, M.</td>
-          <td><input type="checkbox"></td>
-          <td><input type="checkbox"></td>
-          <td><input type="checkbox"></td>
-          <td><input type="checkbox"> <br>
-            <button class="btn btn-primary">View Excuse</button></td>
-          <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
-        </tr>
-      </table>
-    </div>
+      <style>
+        .none {
+          display: none;
+        }
 
-    <div class="none" id="hi">
-      <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
-        <div class="mt-3">
-          <thead>
-            <h1>St.Bernardin</h1>
-          	<th>Full Name</th>
-           <th>Present</th>
-           <th>Absent</th>
-          <th>late</th>
-        <th>Excuse</th>
-        <th>View Info</th>
-          </thead>
-          <tbody  id="child"></tbody>
-        </div>
-        <tr  >
-          <td>Alonza, C</td>
-          <td><input type="checkbox"></td>
-          <td><input type="checkbox"></td>
-          <td><input type="checkbox"></td>
-          <td><input type="checkbox"> <br>
-            <button class="btn btn-primary">View Excuse</button></td>
-          <td><a href="#" class="btn btn-success">View Info</a></td>
-        </tr>
-      </table>
-    </div>
+        .block {
+          display: block;
 
-      
+        }
+      </style>
+      <div class="none" id="hello">
+        <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
+          <div class="mt-3">
+            <thead>
+              <h1>St.Angelo</h1>
+              <th>Full Name</th>
+              <th>Present</th>
+              <th>Absent</th>
+              <th>late</th>
+              <th>Excuse
 
-        <table class="table table-bordered table-primary sticky" style="text-align: center; margin-top: 5px;">
+              </th>
+              <th>View Info</th>
+            </thead>
+            <tbody id="child"></tbody>
+          </div>
           <tr>
-            <tbody>
-              <td><a href="#" class="btn btn-success">Save</a></td>
-              <td><a href="" class="btn btn-danger">Cancel</a></td>
-            </tbody>
+            <td>Gregorio, Franco, M.</td>
+            <td><input type="checkbox">
+            
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"> 
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td>Gregorio, Franco, M.</td>
+            <td><button class="btn btn-success">0</button></td>
+            <td><button class="btn btn-danger">0</button></td>
+            <td><button class="btn btn-warning">0</button></td>
+            <td> <p style="position: absolute; background-color: red; width: 20px; height: 20px; margin-top: -10px; border-radius: 100%; color: white;" >1</p><button class="btn btn-primary">  View Excuse</button></td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
           </tr>
         </table>
-      
+      </div>
+
+      <div class="none" id="hi">
+        <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
+          <div class="mt-3">
+            <thead>
+              <h1>St.Bernardin</h1>
+              <th>Full Name</th>
+              <th>Present</th>
+              <th>Absent</th>
+              <th>late</th>
+              <th>Excuse</th>
+              <th>View Info</th>
+            </thead>
+            <tbody id="child"></tbody>
+          </div>
+          <tr>
+            <td>Lucas, Grey L.</td>
+            <td><input type="checkbox">
+            
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"> 
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td>Lucas, Grey L.</td>
+            <td><button class="btn btn-success">0</button></td>
+            <td><button class="btn btn-danger">0</button></td>
+            <td><button class="btn btn-warning">0</button></td>
+            <td><button class="btn btn-primary">View Excuse</button></td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+        </table>
+      </div>
+
+
+
+      <table class="table table-bordered table-primary sticky" style="text-align: center; margin-top: 5px;">
+        <tr>
+          <tbody>
+            <td><a href="#" class="btn btn-success">Save</a></td>
+            <td><a href="" class="btn btn-danger">Cancel</a></td>
+          </tbody>
+        </tr>
+      </table>
+
 
     </div>
   </div>

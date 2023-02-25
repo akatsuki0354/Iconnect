@@ -16,15 +16,40 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <i class="fas fa-user" class="fas"></i>
-        <a class="navbar-brand" id="hh" href="#">ICONnect</a>
-        <ul class="navbar-nav mr-auto">
-            <a href="teacherhome.html">Manual</a>
-            <a href="/teacher/QR-Attendance.html">QR-Attendance</a>
-        </ul>
-        <a id="userlink" class="nav-link user" href="">Username</a>
-        <a id="signoutlink" class="nav-link" href="">Signout</a>
+    <script type="module" src="/javascript/teacher/home-teacher.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
+      <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
+        <div class="img-logo" style="display: flex;">
+          <img src="/img/ico.png" alt="" style="width: 70px; height: 70px;">
+         <div>
+          <h1 >ICONnect</h1>
+          <p style="margin-top: -15px;">QR-Monitoring System</p>
+         </div>
+        </div>
+      </div>
+  
+      <div class="homepage" style="display: flex; justify-content: center;">
+        <a href="/teacher/teacherhome.html" class="btn btn-dark">Manual</a>
+        <a href="QR-Attendance.html" class="btn btn-dark">QR-Attendance</a>
+       </div>
+   <div style="display: flex;">
+      <h4  id="name" href="#" style="color: white; margin-right: 10px; margin-top: 20px;">ICONnect</h4>
+      <div  style="width: 60px; height: 60px; text-align: center; border-radius: 100px;  cursor: pointer; background-color: #ddd;"><p style="margin-top: 20px;">profile</p> </div>
+      <!-- drop down -->
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+        <div class="dropdown-content">  
+          <a  id="hh" href="#">ICONnect</a>
+          <hr>
+          <a id="userlink" style="display: none;" class="nav-link user" href="">Username</a>
+          <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+          <a href="/teacher/settings.html">settings</a>
+        
+          <a id="signoutlink" class="nav-link" href="">Signout</a>
+        </div>
+      </div>
+   </div>
+     
     </nav>
     
     <div class="main">

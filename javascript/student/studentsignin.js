@@ -39,12 +39,18 @@ function AuthenticateUser() {
 
     // Validate username and password input
     if (!stdNoregex.test(stdNo.value)) {
+        stdNo.classList.add('invalid');
         alert("Please enter a valid username (minimum 5 characters).");
         return;
+    }else {
+        stdNo.classList.remove('invalid');
     }
     if (!passwordregex.test(password.value)) {
+        stdNo.classList.add('invalid');
         alert("Please enter a valid password (minimum 8 characters).");
         return;
+    }else {
+        stdNo.classList.remove('invalid');
     }
 
     get(child(dbRef, "teacherlist/" + stdNo.value))

@@ -3,6 +3,7 @@ let signoutlink = document.getElementById('signoutlink');
 let studentNo = document.getElementById('studentNo');
 let text = document.getElementById("text")
 let header = document.getElementById('hh');
+// let picture = document.getElementById('image');
 var currentUser = null;
 
 function getUsername(){
@@ -41,9 +42,10 @@ window.onload = function(){
         userlink.innerText = currentUser.stdNo;
         header.innerText = currentUser.name;
         studentNo.value = currentUser.stdNo;
+        // picture.innerHTML ='<img src="/img/ico.png" alt="" style="width: 150px">';
         userlink.classList.replace("nav-link","btn");
         userlink.classList.add("btn-primary");
-        userlink.href = "profile.html";
+        // userlink.href = "profile.html";
 
         signoutlink.innerText="Sign Out";
         signoutlink.classList.replace("nav-link","btn");

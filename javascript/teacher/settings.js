@@ -3,13 +3,14 @@ let userlink = document.getElementById('userlink');
 let signoutlink = document.getElementById('signoutlink');
 let header = document.getElementById('hh');
 let name = document.getElementById('name')
+let yourname = document.getElementById("editname");
+let editNo = document.getElementById("editNo")
 
 
 var currentUser = null;
 
 function getUsername() {
     let KeepLogin = localStorage.getItem("KeepLogin");
-
     if (KeepLogin == "yes") {
         currentUser = JSON.parse(localStorage.getItem('user'));
     }
@@ -42,6 +43,8 @@ window.onload = function () {
         userlink.innerText = currentUser.stdNo;
         header.innerText = currentUser.name;
         name.innerText = currentUser.name;
+        editNo.innerHTML = currentUser.stdNo
+        yourname.innerHTML = currentUser.name;
         userlink.classList.replace("nav-link", "btn");
         // userlink.classList.add("");
         // userlink.href = "profile.html";
