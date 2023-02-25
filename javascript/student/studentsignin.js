@@ -7,14 +7,14 @@ import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/fireb
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD1GxCsUNfVYuE8vq5Z9u3kj8dHFval7Hc",
-  authDomain: "firestore-9d6f3.firebaseapp.com",
-  databaseURL: "https://firestore-9d6f3-default-rtdb.firebaseio.com",
-  projectId: "firestore-9d6f3",
-  storageBucket: "firestore-9d6f3.appspot.com",
-  messagingSenderId: "937341367464",
-  appId: "1:937341367464:web:32573b0a9ef70099247e9d",
-  measurementId: "G-D9QFV2F1QQ"
+    apiKey: "AIzaSyDcBP3v9NIg9YyNZbWnuKNcUHUpeYRKBoY",
+    authDomain: "iconectstudent.firebaseapp.com",
+    databaseURL: "https://iconectstudent-default-rtdb.firebaseio.com",
+    projectId: "iconectstudent",
+    storageBucket: "iconectstudent.appspot.com",
+    messagingSenderId: "592757466358",
+    appId: "1:592757466358:web:5fc730b9812d1b6aceb8d7",
+    measurementId: "G-WW7M44ENGJ"
 };
 
 // Initialize Firebase

@@ -139,6 +139,7 @@ hr{
     .main .text p{
         font-size: 20px;
         color: gray;
+        font-family: "cooper-black-std", serif;
     }
 }
 

@@ -56,7 +56,7 @@ body{
 
 .main input{
     width: 250px;
-    padding-left: 40px;
+    padding-left: 27px;
 }
 
 .main .text h1{
@@ -68,6 +68,7 @@ body{
 }
 p{
     text-align: center;
+    
 }
 
 .main .text h1 span{
