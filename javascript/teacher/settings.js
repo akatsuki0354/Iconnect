@@ -51,7 +51,7 @@ window.onload = function () {
 
 
 
-        signoutlink.innerText = "Sign Out";
+        // signoutlink.innerText = "Sign Out";
         signoutlink.classList.replace("nav-link", "btn");
         // signoutlink.classList.add("btn-info");
         signoutlink.href = "javascript:Signout()";
