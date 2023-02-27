@@ -45,7 +45,7 @@ function isEmptyOrSpaces(str){
 function Validation() {
     let nameregex = /^[a-zA-Z\s]+$/;
     let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
-    let stdNoregex = /^[a-zA-Z0-9]{5,}$/;
+    let stdNoregex = /^[a-zA-Z0-9\-]{5,}$/;
     let passwordregex = /^(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
  
     if(isEmptyOrSpaces(name.value)){

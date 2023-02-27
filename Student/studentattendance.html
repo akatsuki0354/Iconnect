@@ -17,68 +17,70 @@
     placeholder="Enter Text Here" disabled>
   <input type="text" class="form-control" id="text" name="username" placeholder="Enter Text Here" readonly
     style="display: none;">
-    <style>
+  <style>
+    .imgs {
+      display: flex;
+      justify-content: center;
+      color: rgb(224, 224, 224);
+    }
 
-      .imgs{
-        display:flex; 
-        justify-content: center;
-        color: rgb(224, 224, 224);
-      }
-    
-      .img h4{
-        margin-top: 2vh;
-      }
-    
-    </style>
-    
-      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <div class="img">
-          <div class="imgs" >
-            <img src="/img/ico.png" alt="" style="width: 100px;">
-         <div>
-          <h4>ICONnect</h4>
-          <h6>QR Monitoring System</h6>
-         </div>
-          </div>
+    .img h4 {
+      margin-top: 2vh;
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
+    <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
+      <div class="img-logo" style="display: flex;">
+        <img src="/img/icon.png" alt="" style="width: 70px; height: 70px; margin-right: 10px;">
+        <div>
+          <h1>ICONnect</h1>
+          <p style="margin-top: -15px;">QR-Attendance Monitoring System</p>
         </div>
-        <ul class="navbar-nav mr-auto">
-        </ul>
-       <div>
-        <i class="fas fa-user" class="fas"></i>
-        <a class="navbar-brand" id="hh" href="#">ICONnect</a>
-        <ul class="navbar-nav mr-auto">
-    
-        </ul>
-        <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="fa fa-home" aria-hidden="true"></i></a>
-        <a id="userlink" class="nav-link user" href="">Username</a>
-        <a id="signoutlink" class="nav-link" href="">Signout</a>
-       </div>
-      </nav>
+      </div>
+    </div>
+
+    <div class="homepage" style="display: flex; justify-content: center;">
+
+    </div>
+    <div style="display: flex;">
+      <!-- drop down -->
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <i class="fas fa-user" style="margin-top: 8px; margin-left: 5px; font-size: 25px;" class="fas"></i>
+      <a class="navbar-brand" id="hh" href="#">ICONnect</a>
+      <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="fa fa-home"
+          aria-hidden="true"></i></a>
+      <a id="userlink" class="nav-link user" href="">Username</a>
+      <a id="signoutlink" class="nav-link" href="">Signout</a>
+    </div>
+    </div>
+  </nav>
 
   <h1 style="margin-left: 10px; font-size: 70px;" class="text text-info">Attendance</h1>
   <div style="padding: 10px; display: flex; justify-content: space-between;">
 
     <div>
-      <p>Subject:  ICT 1200</p>
+      <p>Subject: ICT 1200</p>
       <p>Teacher Name: Juan Dela Cruz</p>
       <div style="display: flex;">
         <input type="text" class="form-control mb3" placeholder="Seacrh...">
-      <button class="btn btn-success"><i class="fa fa-search"></i></button>
+        <button class="btn btn-success"><i class="fa fa-search"></i></button>
       </div>
-     </div>
-   <div>
-    <a href="#" class="btn btn-success">total present : 4</a>
-    <a href="#" class="btn btn-primary">total excuse : 1</a>
-<br>
-<br>
-<a href="#" class="btn btn-warning">total late : 1</a>
-    <a href="#" class="btn btn-danger">total absent : 1</a>
+    </div>
+    <div>
+      <a href="#" class="btn btn-success">total present : 4</a>
+      <a href="#" class="btn btn-primary">total excuse : 1</a>
+      <br>
+      <br>
+      <a href="#" class="btn btn-warning">total late : 1</a>
+      <a href="#" class="btn btn-danger">total absent : 1</a>
 
-<a href="#" class="btn btn-info">total : 7</a>
-   </div>
-  
+      <a href="#" class="btn btn-info">total : 7</a>
+    </div>
+
   </div>
-  
+
   <div class="main">
     <table class="table table-bordered table-primary" style="text-align: center; margin-top: 1px;">
       <tr>

@@ -50,7 +50,7 @@ function Validation() {
   let FirstNameregex = /^[a-zA-Z\s]+$/;
   let MiddleNameregex = /^[a-zA-Z\s]+$/;
   let emailgerex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
-  let stdNoregex = /[a-zA-Z0-9]{5,}/;
+  let stdNoregex = /^[a-zA-Z0-9\-]{5,}$/;
   let passwordregex = /[a-zA-Z0-9]{8,}/;
 
   if (isEmptyOrSpaces(name.value)) {

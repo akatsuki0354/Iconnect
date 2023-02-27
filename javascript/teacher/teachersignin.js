@@ -35,7 +35,7 @@ function AuthenticateUser() {
     const dbRef = ref(db);
 
     let passwordregex = /[a-zA-Z0-9]{8,}/;
-    let stdNoregex = /[a-zA-Z0-9]{5,}/;
+    let stdNoregex = /^[a-zA-Z0-9\-]{5,}$/;
 
     // Validate username and password input
     if (!stdNoregex.test(stdNo.value)) {

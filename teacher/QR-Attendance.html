@@ -17,10 +17,10 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
     <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
       <div class="img-logo" style="display: flex;">
-        <img src="/img/ico.png" alt="" style="width: 70px; height: 70px;">
+        <img src="/img/icon.png" alt="" style="width: 70px; height: 70px; margin-right: 10px;">
         <div>
           <h1>ICONnect</h1>
-          <p style="margin-top: -15px;">QR-Monitoring System</p>
+          <p style="margin-top: -15px;">QR-Attendance Monitoring System</p>
         </div>
       </div>
     </div>
@@ -140,8 +140,8 @@
     }
   </style>
 
-  <h1 style="text-align: center; margin-bottom: 10px;" class="text text-info">QR-Attendance</h1>
-  <div class="searchbar"  >
+
+  <!-- <div class="searchbar"  >
     <div class="day">
       <button class="btn btn-success" style="margin-left: 50px; margin-bottom: 10px;">Monday</button>
       <button class="btn btn-primary" style=" margin-bottom: 10px;">Tuesday</button>
@@ -150,7 +150,7 @@
       <button class="btn btn-danger" style=" margin-bottom: 10px;">Friday</button>
       <button class="btn btn-dark" style=" margin-bottom: 10px;">All Attendance</button>
     </div>
-  </div>
+  </div> -->
 
   <div class="main">
     <!-- dashboard -->
@@ -175,7 +175,6 @@
       <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
           href="/teacher/settings.html">Setting</a></li>
       <hr>
-
       <li style="display: none;">
         <a id="userlink" class="nav-link user" href="">Username</a>
       </li>
@@ -197,10 +196,11 @@
     </script>
      
     
-    <div onclick="navbar()" style="margin-top: -120px; cursor: pointer; position: absolute; color: white; z-index: 2;"><i
+    <div onclick="navbar()" style="margin-top: -20px; cursor: pointer; position: absolute; color: white; z-index: 2;"><i
         class="fa fa-bars" style=" font-size: 25px; margin-top: 20px; padding: 5px;"></i></div>
    <div>
    <div>
+    <h1 style="text-align: center; font-size: 60px; margin-bottom: 50px; margin-left: 35px; " class="text text-info">QR-Attendance</h1>
       <!-- table -->
  <table class="table table-bordered table-info" style="width: 100%; text-align: center; ">
   <thead>
@@ -233,9 +233,13 @@
       <td>44</td>
       <td>St.Angelo</td>
       <td><a href="/teacher/teacherView-Attendance.html" class="btn btn-success">View Attendance</a></td>
+      <span style="font-size: 15px; color: grey; margin-left: 50px; position: absolute; bottom: 0;">©:ICONnect 2023</span>
     </tr>
+  
   </tbody>
+ 
 </table>
+
    </div>
    </div>
   </div>
