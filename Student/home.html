@@ -66,30 +66,38 @@
 
   
     
-    
+    <style>
+      .bts button{
+        width: 100%;
+      }
+    </style>
   
   <div class="home-title" style="display: flex; justify-content: space-between;">
     <h1 style="margin-left: 10px; font-size: 75px;" class="text text-info">Home</h1>
-    <div class="button" style="margin-top: 25px;">
-      <h5 style="margin-right: 80px;" class="text text-primary">Total of all subject Attendance:</h5>
-      <div style="position: absolute; right: 0; margin-right: 30px;">
+    <div class="button" style="margin-top: 25px; margin-bottom: -250px;">
+      <h5 style="font-size: 15px; padding: 10px; text-align: center;" class="text text-primary">Total of all subject Attendance:</h5>
+    <div class="bts" style="display: flex; gap: 10px; margin-right: 20px;">
+      <div>
         <button class="btn btn-success">Total present: 6</button>
+        <hr>
         <button class="btn btn-danger">Total absent: 2</button>
-        <button class="btn btn-warning">Total Late: 2</button>
-        <br>
-        <br>
-
+        <hr>
+        <button class="btn btn-dark" style="margin-left: 80px;">Total: 14</button>
+        
       </div>
-      <div style="position: absolute; right: 0; margin-top: 5vh; margin-right: 30px;">
+      <div>
         <button class="btn btn-primary">Total Excuse: 2</button>
-        <button class="btn btn-dark">Total: 14</button>
+        <hr>
+        <button class="btn btn-warning">Total Late: 2</button>
+        <hr>
       </div>
+    </div>
     </div>
   </div>
 
   <div class="rrrrr"
     style="display: flex;  justify-content: center; position: absolute; right: 0; margin-top: 60px; margin-right: 30px;">
-    <div class="qr-box alert alert-info" id="qrgenerator">
+    <div class="qr-box alert alert-info" id="qrgenerator"  style="display: none ;">
       <div>
         <label for="usr" class="text-dark"></label>
         <input type="text" class="form-control" id="text" name="username" placeholder="Enter Text Here"
@@ -136,9 +144,9 @@
       text-align: center;
     }
   </style>
-  <div class="table" style="margin-top: 20vh;">
-    <table class="table table-bordered table-info">
-      <thead>
+  <div class="table" style="margin-top: 20vh; display: flex; justify-content: center;">
+    <table class="table table-bordered table-info" style="width: 89%;">
+      <thead style="background-color: aqua;">
         <th>Teacher Name</th>
         <th>Subject</th>
         <th>Total Present</th>
