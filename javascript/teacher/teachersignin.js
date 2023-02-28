@@ -77,7 +77,6 @@ function decPass(dbpass) {
 
 // LOGIN
 
-
 function login(user) {
     let keepLoggedIn = document.getElementById('customSwitch1').checked;
     if (!keepLoggedIn) {
