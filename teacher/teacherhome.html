@@ -33,7 +33,7 @@
 
     </div>
     <div style="display: flex;">
-      <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 20px;">ICONnect</h4>
+      <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
       <div
         style="width: 60px; height: 60px; text-align: center; border-radius: 100px;  cursor: pointer; background-color: #ddd;">
         <p style="margin-top: 20px;">profile</p>
@@ -136,8 +136,9 @@
     }
   </style>
 
+ <div class="title" style="display: flex; justify-content: space-between; margin-left: 30px;">
   <h1 style="text-align: center;" class="text text-info">Manual Attendance</h1>
-
+ </div>
   <div class="main">
     <!-- dashboard -->
     <div class="navbar-select" id="navbar">
@@ -267,7 +268,14 @@
         <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
           <div class="mt-3">
             <thead>
-              <h1>St.Angelo</h1>
+              <div class="name-section" style="display: flex; justify-content: space-between;">
+                <h1>St.Angelo</h1>
+                <div>
+                  <button class="btn btn-dark">Male: 1</button>
+                  <button class="btn btn-dark">Female: 0</button>
+                  <button class="btn btn-dark">Total: 1</button>
+                </div>
+              </div>
               <th>Full Name</th>
               <th>Present</th>
               <th>Absent</th>
@@ -292,9 +300,9 @@
           </tr>
           <tr>
             <td>Gregorio, Franco, M.</td>
-            <td><button class="btn btn-success">0</button></td>
-            <td><button class="btn btn-danger">0</button></td>
-            <td><button class="btn btn-warning">0</button></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
             <td>
               <p
                 style="position: absolute; background-color: red; width: 20px; height: 20px; margin-top: -10px; border-radius: 100%; color: white;">
@@ -309,7 +317,14 @@
         <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
           <div class="mt-3">
             <thead>
-              <h1>St.Bernardin</h1>
+              <div class="name-section" style="display: flex; justify-content: space-between;">
+                <h1>St.Angelo</h1>
+                <div>
+                  <button class="btn btn-dark">Male: 1</button>
+                  <button class="btn btn-dark">Female: 0</button>
+                  <button class="btn btn-dark">Total: 1</button>
+                </div>
+              </div>
               <th>Full Name</th>
               <th>Present</th>
               <th>Absent</th>
@@ -332,9 +347,9 @@
           </tr>
           <tr>
             <td>Lucas, Grey L.</td>
-            <td><button class="btn btn-success">0</button></td>
-            <td><button class="btn btn-danger">0</button></td>
-            <td><button class="btn btn-warning">0</button></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
             <td><button class="btn btn-primary">View Excuse</button></td>
             <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
           </tr>

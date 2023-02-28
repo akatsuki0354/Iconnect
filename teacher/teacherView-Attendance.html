@@ -136,6 +136,11 @@
       margin-left: 10px;
       position: absolute;
     }
+
+    .cusor:hover{
+      cursor: pointer;
+      background-color: aquamarine;
+    }
   </style>
 
   <h3 style="text-align: center; margin-bottom: -10px;" class="text text-info">QR-Attendance</h3>
@@ -205,12 +210,14 @@
           <p>Subject:</p>
           <p>Teacher Name:</p>
           <a href="/teacher/enroll.html" class="btn btn-success"
-          style="margin-bottom: 10px; width: 95px; height: 40px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll</a>
-          
-        <a href="/teacher/CreateQR.html" class="btn btn-primary"
-          style="margin-bottom: 10px; width: 120px; height: 40px;"><i class="fa fa-qrcode" aria-hidden="true"></i> Create-QR</a>
-       <br>
-         
+            style="margin-bottom: 10px; width: 95px; height: 40px;"><i class="fa fa-user-plus" aria-hidden="true"></i>
+            Enroll</a>
+
+          <a href="/teacher/CreateQR.html" class="btn btn-primary"
+            style="margin-bottom: 10px; width: 120px; height: 40px;"><i class="fa fa-qrcode" aria-hidden="true"></i>
+            Create-QR</a>
+          <br>
+
           <th><input type="date" class="form-control mb-3"></th>
         </div>
 
@@ -220,60 +227,70 @@
             <button class="btn btn-info" style=" margin-bottom: 10px;">Wednesday</button>
             <button class="btn btn-danger" style=" margin-bottom: 10px;">Friday</button>
             <button class="btn btn-dark" style=" margin-bottom: 10px;">All Attendance</button>
+
+            <div class="summary" style="position: absolute; top: 0; right: 0; margin-top: 320px; margin-right: 10px;">
+              <button class="btn btn-dark">Male: 3</button>
+              <button class="btn btn-dark">Female: 1</button>
+              <button class="btn btn-dark">Total: 4</button>
+            </div>
           </div>
+
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
+
         </div>
       </div>
-      <table class="table table-bordered table-primary" style="text-align: center; margin-top: 1px;">
-        <tr>
+      <div class="table" style="display: flex; justify-content: center;">
+        <table class="table table-bordered table-primary"
+          style="text-align: center; margin-top: 1px; width: 90%; margin-left: 35px;">
+          <tr style="background-color: aqua;">
+            <th>Full Name</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Excuse</th>
+            <th>Late</th>
+            <th>View Info</th>
+          </tr>
+          <tr>
 
-          <th>Full Name</th>
-          <th >Present</th>
-          <th>Absent</th>
-          <th>Excuse</th>
-          <th>Late</th>
-          <th>View Info</th>
-        </tr>
-        <tr>
-         
-          <th>Franco gregorio</th>
-          <th><button class="btn btn-success">0</button></th>
-          <th><button class="btn btn-danger">0</button></th>
-          <th><button class="btn btn-primary">0</button></th>
-          <th><button class="btn btn-warning">0</button></th>
-          <th><a href="/teacher/viewinfo.html" class="btn btn-info">View info</a></th>
-        </tr>
-        <tr>
-         
-          <th>Javier Mateo</th>
-          <th><button class="btn btn-success">0</button></th>
-          <th><button class="btn btn-danger">0</button></th>
-          <th><button class="btn btn-primary">0</button></th>
-          <th><button class="btn btn-warning">0</button></th>
-          <th><a href="" class="btn btn-info">View info</a></th>
-        </tr>
-        <tr>
-         
-          <th>Jake Acedo</th>
-          <th><button class="btn btn-success">0</button></th>
-          <th><button class="btn btn-danger">0</button></th>
-          <th><button class="btn btn-primary">0</button></th>
-          <th><button class="btn btn-warning">0</button></th>
-          <th><a href="" class="btn btn-info">View info</a></th>
-        </tr>
-        <tr>
-         
-          <th>Ellaysa aguilar</th>
-          <th><button class="btn btn-success">0</button></th>
-          <th><button class="btn btn-danger">0</button></th>
-          <th><button class="btn btn-primary">0</button></th>
-          <th><button class="btn btn-warning">0</button></th>
-          <th><a href="" class="btn btn-info">View info</a></th>
-        </tr>
-      </table>
+            <th>Franco gregorio</th>
+            <th class="cusor">0</th>
+            <th class="cusor">0</th>
+            <th class="cusor">0</th>
+            <th class="cusor">0</th>
+            <th><a href="/teacher/viewinfo.html" class="btn btn-info">View info</a></th>
+          </tr>
+          <tr>
+
+            <th>Javier Mateo</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th><a href="" class="btn btn-info">View info</a></th>
+          </tr>
+          <tr>
+
+            <th>Jake Acedo</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th><a href="" class="btn btn-info">View info</a></th>
+          </tr>
+          <tr>
+
+            <th>Ellaysa aguilar</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th class="cusor" >0</th>
+            <th><a href="" class="btn btn-info">View info</a></th>
+          </tr>
+        </table>
+      </div>
     </div>
     <script src="/javascript/teacher/home-teacher.js"></script>
 </body>
