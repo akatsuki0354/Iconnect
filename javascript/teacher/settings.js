@@ -4,7 +4,8 @@ let signoutlink = document.getElementById('signoutlink');
 let header = document.getElementById('hh');
 let name = document.getElementById('name')
 let yourname = document.getElementById("editname");
-let editNo = document.getElementById("editNo")
+let editNo = document.getElementById("editNo");
+let email = document.getElementById("email")
 
 
 var currentUser = null;
@@ -43,7 +44,8 @@ window.onload = function () {
         userlink.innerText = currentUser.stdNo;
         header.innerText = currentUser.name;
         name.innerText = currentUser.name;
-        editNo.innerHTML = currentUser.stdNo
+        editNo.innerHTML = currentUser.stdNo;
+        email.innerHTML = currentUser.email;
         yourname.innerHTML = currentUser.name;
         userlink.classList.replace("nav-link", "btn");
         // userlink.classList.add("");
