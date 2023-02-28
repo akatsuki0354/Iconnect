@@ -8,7 +8,7 @@ function Trigger(){
       } else {
         /* Icon */
         arrow.classList.add('fa-eye-slash')
-        arrow.classList.remove('fa-eye')
+         arrow.classList.remove('fa-eye')
       }
   
       var x = document.getElementById("passInp");
