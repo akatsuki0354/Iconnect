@@ -193,7 +193,7 @@
                 <i class="fa fa-user-circle" onclick="tableClick()" aria-hidden="true" style="font-size: 25px;"> <span
                         id="hh" href="#">Profile</span></i>
                 <hr>
-                <i class="fa fa-lock" onclick="tableClicks()" aria-hidden="true" style="font-size: 25px;"><span>
+                <i class="fa fa-lock" onclick="tableClick()" aria-hidden="true" style="font-size: 25px;"><span>
                         Privacy</span></i>
                 <hr>
                 <i class="fa fa-shield" style="font-size:25px"><span> Security Login</span></i>
@@ -252,7 +252,7 @@
                     <br>
                     <br>
                 </p>
-                <h3>Protecting Privacy</h3>
+                <!-- <h3>Protecting Privacy</h3>
                 <p>
                     <span>Password:</span> We are increpting your password for your more security in your account.
                 </p>
@@ -271,7 +271,7 @@
                 </p>
                 <p>
                     <span>Phishing: </span> Always check the link if it is right page  like this <a href="">ICONnect</a>
-                </p>
+                </p> -->
             </div>
         </div>
     </div>
@@ -283,32 +283,38 @@
         <script>
             function tableClick() {
                 const text = document.getElementById("hello")
-
+                const privacy = document.getElementById("hi")
                 if (text.classList.contains('none')) {
                     text.classList.remove('none')
                     text.classList.add('block')
+
+                    privacy.classList.remove('block')
+                    privacy.classList.add('none')
                 }
                 else {
                     text.classList.remove('block')
                     text.classList.add('none')
+
+                   privacy.classList.remove('none')
+                   privacy.classList.add('block')
                 }
 
             }
 
 
-            function tableClicks() {
-                const text = document.getElementById("hi")
+            // function tableClicks() {
+            //     const text = document.getElementById("hi")
 
-                if (text.classList.contains('none')) {
-                    text.classList.remove('none')
-                    text.classList.add('block')
-                }
-                else {
-                    text.classList.remove('block')
-                    text.classList.add('none')
-                }
+            //     if (text.classList.contains('none')) {
+            //         text.classList.remove('none')
+            //         text.classList.add('block')
+            //     }
+            //     else {
+            //         text.classList.remove('block')
+            //         text.classList.add('none')
+            //     }
 
-            }
+            // }
         </script>
 
         <style>

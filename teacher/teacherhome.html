@@ -201,7 +201,7 @@
           <td>ICT 600</td>
           <td>7:30 A.M - 8:30 A.M</td>
         </tr>
-        <tr class="hover" onclick="tableClicks()">
+        <tr class="hover" onclick="tableClick()">
           <td>St.Bernardin</td>
           <td>ICT 600</td>
           <td>8:30 A.M - 9:30 A.M</td>
@@ -228,32 +228,24 @@
 
         function tableClick() {
           const text = document.getElementById("hello")
+          const stangelo = document.getElementById("hi")
 
           if (text.classList.contains('none')) {
+            stangelo.classList.remove('block')
+            stangelo.classList.add('none')
+
             text.classList.remove('none')
             text.classList.add('block')
           }
           else {
             text.classList.remove('block')
             text.classList.add('none')
+
+            stangelo.classList.remove('none')
+            stangelo.classList.add('block')
           }
-
-        }
-
-
-        function tableClicks() {
-          const text = document.getElementById("hi")
-
-          if (text.classList.contains('none')) {
-            text.classList.remove('none')
-            text.classList.add('block')
+           
           }
-          else {
-            text.classList.remove('block')
-            text.classList.add('none')
-          }
-
-        }
 
       </script>
 
@@ -321,7 +313,7 @@
           <div class="mt-3">
             <thead>
               <div class="name-section" style="display: flex; justify-content: space-between;">
-                <h1>St.Angelo</h1>
+                <h1>St.Bernadine</h1>
                 <div>
                   <button class="btn btn-dark">Male: 1</button>
                   <button class="btn btn-dark">Female: 0</button>
