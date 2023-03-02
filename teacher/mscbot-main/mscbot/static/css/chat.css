@@ -41,10 +41,9 @@
   }
 
   /* table */
-  table {
-    margin-left: 10px;
-    position: absolute;
-  }
+.dalawa{
+    overflow: scroll;
+}
 
 .chat-main{
     display: flex;
