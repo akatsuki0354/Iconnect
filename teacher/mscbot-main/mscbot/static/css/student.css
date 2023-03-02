@@ -1,0 +1,40 @@
+
+.chat-main .Student-online .student{
+    width: 100%;
+    box-shadow: 0 0 10px rgb(139, 139, 139);
+    height: 80px;
+    padding: 13px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.chat-main .Student-online .active{
+    background-color: rgb(199, 199, 199);
+    box-shadow: none;
+}
+
+.chat-main .Student-online .student:hover{
+   background-color: rgb(199, 199, 199);
+   cursor: pointer;
+}
+
+.chat-main .Student-online{
+    border-right: solid 1px black;
+    padding: 10px;
+    overflow: scroll;
+    width: 90%;
+    height: 87vh;
+}
+
+.chat-main .Student-online .student p{
+margin-left: -15px;
+font-weight: bold;
+}
+
+.chat-main .Student-online .student .student-profile{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 100%;
+}
