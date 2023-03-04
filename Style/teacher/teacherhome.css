@@ -1,16 +1,114 @@
+nav .Profile{
+  width: 60px; 
+  height: 60px; 
+  text-align: center; 
+  border-radius: 100px;  
+  cursor: pointer; 
+  background-color: #ddd;
+  overflow: hidden;
+  border: solid 2px rgb(179, 179, 179);
+}
 
- .nav-fas{
-    background-color: rgb(7, 150, 150);
-    color: black;
-    padding: 2px;
-    padding-left: 20px;
-    border-radius: 5px;
-  }
+.dashboard span{
+  position: absolute;
+  background-color: gray;
+  padding: 5px;
+  border-radius: 10px;
+ opacity: 0;
+ margin-left: 5px;
+ pointer-events: none;
+}
+nav .Profile i{
+  font-size: 50px;
+  margin-top: -10px;
+  color: gray;
+}
 
-  .fas{
-    margin-right: 5px;
-    color: white;
-  }
+/* DashBoard */
+
+nav i{
+  text-align: center;
+}
+
+nav i .span{
+  position: absolute;
+  margin-top: 30px;
+  width: 100px;
+  margin-left: -59px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+nav .btn i span{
+  position: absolute;
+  margin-top: 27px;
+  width: 100px;
+  margin-left: -59px;
+  padding: 10px;
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+nav .btn:hover i span{
+  position: absolute;
+  margin-top: 27px;
+  width: 100px;
+  margin-left: -59px;
+  padding: 10px;
+  font-size: 12px;
+  opacity: 1;
+}
+ 
+.navbar-select .img .profile {
+  border: solid 2px rgb(49, 49, 49);
+  overflow: hidden;
+}
+
+.navbar-select .img .profile i{
+  font-size: 85px;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: gray;
+}
+
+.dashboard i:hover span{
+  opacity: 1;
+  font-size: 15px;
+  font-family: normal;
+  pointer-events: none;
+}
+
+
+.navbar-select  .fa-camera{
+  position: relative;
+  top: 75px;
+  font-size: 15px;
+  margin-left: -30px;
+  color: rgb(228, 228, 228);
+  background-color: rgb(49, 49, 49);
+  padding: 5px;
+  height: 25px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+
+.nav-fas{
+  background-color: rgb(7, 150, 150);
+  color: black;
+  padding: 2px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+
+
+.fas{
+  margin-right: 5px;
+  color: white;
+}
 
 .user{
   display: none;
@@ -46,8 +144,6 @@ table tr td{
 .table{
  padding-right: 10px;
  padding-top: 15px;
- /* border-right: solid 1px black; */
-
 }
 
 .main .searchbar{
@@ -55,17 +151,4 @@ table tr td{
 
 }
 
-
-
-
-
-/* .sticky{
- 
-  position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    position: absolute;
-    width: 65vh;
-    
-} */
 

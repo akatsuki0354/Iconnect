@@ -39,8 +39,8 @@ window.onload = function(){
     }
     else{
         text.value = currentUser.name;
-        userlink.innerText = currentUser.stdNo;
-        header.innerText = currentUser.name;
+        userlink.innerText = currentUser.stdNo ;
+        header.innerText = currentUser.name +", "+ currentUser.FirstName +", " + currentUser.MiddleName;
         studentNo.value = currentUser.stdNo;
         // picture.innerHTML ='<img src="/img/ico.png" alt="" style="width: 150px">';
         userlink.classList.replace("nav-link","btn");

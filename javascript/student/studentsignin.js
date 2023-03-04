@@ -53,7 +53,7 @@ function AuthenticateUser() {
         stdNo.classList.remove('invalid');
     }
 
-    get(child(dbRef, "teacherlist/" + stdNo.value))
+    get(child(dbRef, "Student/" + stdNo.value))
         .then((snapshot) => {
             if (snapshot.exists()) {
                 let dbpass = decPass(snapshot.val().password);

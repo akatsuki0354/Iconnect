@@ -22,20 +22,32 @@
         </div>
       </div>
     </div>
-
     <div class="homepage" style="display: flex; justify-content: center;">
-
     </div>
     <div style="display: flex;">
-      <a href="" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="material-icons">notifications</i><span style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></a>
-      <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment" aria-hidden="true"></i></a>
-  <i class="fas fa-user" style="margin-top: 8px; margin-left: 5px; font-size: 25px; margin-top: 16px;" class="fas"></i>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- notification -->
+      <a href="" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
+        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
+        <span
+          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></a>
+      <!-- Messanger -->
+      <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
+        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
+          style="font-size: 20px;" aria-hidden="true"><span class="span"  style="margin-left: -55px;">Message</span></i></a>
+      <!-- Home -->
+      <a href="/teacher/teacherhome.html" class="btn btn-dark"
+        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home"
+          style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+      <!-- nameof teacher -->
       <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
-      <div
-        style="width: 60px; height: 60px; text-align: center; border-radius: 100px;  cursor: pointer; background-color: #ddd;">
-        <p style="margin-top: 20px;">profile</p>
+      <!-- Profile   -->
+      <div class="Profile">
+        <p style="margin-top: 20px;">
+          <i class="fa fa-user"></i>
+        </p>
       </div>
-      <!-- drop down -->
+
       <div class="dropdown">
         <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
             style='font-size:25px; margin-top: 10px;'></i></a>
@@ -43,7 +55,6 @@
         </div>
       </div>
     </div>
-
   </nav>
   <style>
     .navbar-select {
@@ -98,7 +109,6 @@
       --uib-size: 20px;
       --uib-speed: 3s;
       --uib-color: rgb(0, 221, 0);
-      margin-top: 90px;
       position: relative;
       height: var(--uib-size);
       width: var(--uib-size);
@@ -148,19 +158,24 @@
     }
   </style>
 
-  <h3 style="text-align: center; margin-bottom: -10px;" class="text text-info">QR-Attendance</h3>
+  <h3 style="margin-left: 35px; margin-bottom: -10px;  font-size: 40px;" class="text text-info">St. Angelo</h3>
   <div class="searchbar">
 
   </div>
 
   <div class="main">
     <!-- dashboard -->
-    <div class="navbar-select left" id="navbar">
-
+    <div class="navbar-select" id="navbar">
+  
       <div class="img" style="display: flex; justify-content: center;">
-        <div style="width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+        <div>
+          <div class="profile" style="width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+            <i class="fa fa-user"></i>
+          </div>
           <div class="pulsar"></div>
         </div>
+        <label for="files"><i class="fa fa-camera" aria-hidden="true"></i></label>
+        <input style="display: none;" type="file" class="hidden" id="files">
       </div>
       <li>
         <i class="fa fa-user" style="font-size: 25px;"></i>
@@ -168,47 +183,43 @@
       </li>
       <hr>
       <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
-          href="/teacher/teacherhome.html">Manual</a></li>
+        href="/teacher/manual.html">Manual</a></li>
       <hr>
       <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
           href="QR-Attendance.html">QR-Attendance</a></li>
       <hr>
       <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
-          href="/teacher/settings.html">Settings</a></li>
+          href="/teacher/settings.html">Setting</a></li>
       <hr>
-
       <li style="display: none;">
         <a id="userlink" class="nav-link user" href="">Username</a>
       </li>
     </div>
+    <script>
+      function navbar() {
+        const text = document.getElementById("navbar")
+  
+        if (text.classList.contains('left')) {
+          text.classList.remove('left')
+          text.classList.add('right')
+        }
+        else {
+          text.classList.remove('right')
+          text.classList.add('left')
+        }
+  
+      }
+    </script>
+  
+  
+    <div onclick="navbar()" class="dashboard"
+      style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: white; z-index: 2;"><i class="fa fa-bars"
+        style=" font-size: 25px; margin-top: 20px; padding: 5px;"> <span>Dashboard</span></i></div>
   </div>
-  <script>
-    function navbar() {
-      const text = document.getElementById("navbar")
-
-      if (text.classList.contains('left')) {
-        text.classList.remove('left')
-        text.classList.add('right')
-      }
-      else {
-        text.classList.remove('right')
-        text.classList.add('left')
-      }
-
-    }
-  </script>
-
-
-  <div onclick="navbar()" style="margin-top: -50px; cursor: pointer; position: absolute; color: white; z-index: 2;"><i
-      class="fa fa-bars" style=" font-size: 25px; margin-top: 20px; padding: 5px;"></i></div>
-  <div>
+      <div > 
     <div>
     </div>
-
-
-
-    <h1 class="text text-info" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">St.Angelo Attendance
-    </h1>
+    <h1 class="text text-info" style="margin-left: 35px; font-size: 20px; margin-top: 20px; margin-bottom: 20px;">QR-Attendance</h1>
     <div class="main-view">
       <div style="padding: 10px; margin-left: 30px; display: flex; justify-content: space-between;">
         <div>
@@ -223,27 +234,31 @@
             Create-QR</a>
           <br>
 
-          <th><input type="date" class="form-control mb-3"></th>
+         
         </div>
-
+<style>
+  .day .btn{
+    width: 100px;
+  }
+</style>
         <div>
           <div class="day">
-            <button class="btn btn-success" style="margin-left: 50px; margin-bottom: 10px;">Monday</button>
-            <button class="btn btn-info" style=" margin-bottom: 10px;">Wednesday</button>
-            <button class="btn btn-danger" style=" margin-bottom: 10px;">Friday</button>
-            <button class="btn btn-dark" style=" margin-bottom: 10px;">All Attendance</button>
-
-            <div class="summary" style="position: absolute; top: 0; right: 0; margin-top: 320px; margin-right: 10px;">
+            <div class="summary" style="position: absolute; top: 0; right: 0; margin-top: 120px; margin-right: 10px;">
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <br>
+              <th><input type="date" class="form-control mb-3"></th>
               <button class="btn btn-dark">Male: 3</button>
               <button class="btn btn-dark">Female: 1</button>
               <button class="btn btn-dark">Total: 4</button>
+             
+              
             </div>
           </div>
 
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+         
 
         </div>
       </div>

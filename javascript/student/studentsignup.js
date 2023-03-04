@@ -48,7 +48,7 @@ function isEmptyOrSpaces(str) {
 function Validation() {
   let nameregex = /^[a-zA-Z\s]+$/;
   let FirstNameregex = /^[a-zA-Z\s]+$/;
-  let MiddleNameregex = /^[a-zA-Z\s]+$/;
+  let MiddleNameregex = /^[a-zA-Z]+\s?\.?\s?[a-zA-Z]*$/;
   let emailgerex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
   let stdNoregex = /^[a-zA-Z0-9\-]{5,}$/;
   let passwordregex = /[a-zA-Z0-9]{8,}/;
@@ -98,12 +98,12 @@ function Validation() {
   }
   if (!FirstNameregex.test(FirstName.value)) {
     password.classList.add('invalid');
-    alert("Password should be at least 8 characters long and can only contain alphabets and numbers");
+    alert("Name should only contain alphabets and spaces");
     return false;
   } MiddleNameregex
   if (!MiddleNameregex.test(MiddleName.value)) {
     password.classList.add('invalid');
-    alert("Password should be at least 8 characters long and can only contain alphabets and numbers");
+    alert("Name should only contain alphabets and spaces");
     return false;
   }
   return true;
@@ -121,7 +121,7 @@ function RegisterUser() {
       const user = userCredential.user;
       // Add the user to the database
       const dbRef = ref(db);
-      set(ref(dbRef, "teacherlist/" + stdNo.value), {
+      set(ref(dbRef, "Student/" + stdNo.value), {
         FirstName: FirstName.value,
         MiddleName: MiddleName.value,
         name: name.value,
@@ -143,18 +143,20 @@ function RegisterUser() {
     });
   const dbRef = ref(db);
 
-  get(child(dbRef, "teacherlist/" + stdNo.value))
+  get(child(dbRef, "Student/" + stdNo.value))
     .then((snapshot) => {
       if (snapshot.exists()) {
         alert("account already exist");
       }
       else {
-        set(ref(db, "teacherlist/" + stdNo.value),
+        set(ref(db, "Student/" + stdNo.value),
           {
-            name: name.value,
-            email: email.value,
-            stdNo: stdNo.value,
-            password: encPass()
+            FirstName: FirstName.value,
+        MiddleName: MiddleName.value,
+        name: name.value,
+        email: email.value,
+        stdNo: stdNo.value,
+        password: encPass(),
           })
           .then(() => {
             alert("Hello! You are now registerd mr/mrs" + name.value)
@@ -165,12 +167,9 @@ function RegisterUser() {
       }
     });
 }
-
 function encPass() {
   var password12 = CryptoJS.AES.encrypt(password.value, password.value);
   return password12.toString();
 }
-
-
 submit.addEventListener('click', RegisterUser);
 

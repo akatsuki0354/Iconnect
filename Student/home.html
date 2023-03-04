@@ -19,23 +19,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
+
+
   <Title>ICONnect</Title>
 </head>
 
 <body>
-  <style>
-    .imgs {
-      display: flex;
-      justify-content: center;
-      color: rgb(224, 224, 224);
-      width: 250px;
-    }
-
-    .img h4 {
-      margin-top: 2vh;
-    }
-  </style>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
     <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
@@ -51,103 +44,240 @@
     <div class="homepage" style="display: flex; justify-content: center;">
 
     </div>
-    <div style="display: flex;"> 
+    <div style="display: flex;">
       <!-- drop down -->
-        <ul class="navbar-nav mr-auto">
-        </ul>
-        <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="fa fa-home" aria-hidden="true"></i></a>
-        <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="material-icons">notifications</i><span style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></a>
-        <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="fa fa-comment" aria-hidden="true"></i></a>
-        <i class="fas fa-user" style="margin-top: 8px; margin-left: 5px; font-size: 25px;" class="fas"></i>
-        <a class="navbar-brand" id="hh" href="#">ICONnect</a>
-        <a id="userlink" class="nav-link user" href="">Username</a>
-        <a id="signoutlink" class="nav-link" href="">Signout</a>
-       </div>
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="fa fa-home"
+          aria-hidden="true"></i></a>
+      <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i
+          class="material-icons">notifications</i><span
+          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></a>
+      <a href="home.html" class="btn btn-dark" style="margin-right: 10px; cursor: pointer;"><i class="fa fa-comment"
+          aria-hidden="true"></i></a>
+      <i class="fas fa-user" style="margin-top: 8px; margin-left: 5px; font-size: 25px;" class="fas"></i>
+      <a class="navbar-brand" id="hh" href="#">ICONnect</a>
+      <a id="userlink" class="nav-link user" href="">Username</a>
+      <a id="signoutlink" class="nav-link" href="">Signout</a>
+    </div>
     </div>
   </nav>
 
-  
-    
-    <style>
-      .bts button{
-        width: 100%;
-      }
-    </style>
-  
   <div class="home-title" style="display: flex; justify-content: space-between;">
-    <h1 style="margin-left: 10px; font-size: 75px;" class="text text-info">Home</h1>
-    <div class="button" style="margin-top: 25px; margin-bottom: -250px;">
-      <h5 style="font-size: 15px; padding: 10px; text-align: center;" class="text text-primary">Total of all subject Attendance:</h5>
-    <div class="bts" style="display: flex; gap: 0px; margin-right: 20px;">
-      <div>
-        <button class="btn btn-success" style="width: 140px;">Total present: 6</button>
-        <hr>
-        <button class="btn btn-danger" style="width: 140px;">Total absent: 2</button>
-        <hr>
-        <button class="btn btn-dark" style="margin-left: 80px;">Total: 14</button>
-        
-      </div>
-      <div>
-        <button class="btn btn-primary">Total Excuse: 2</button>
-        <hr>
-        <button class="btn btn-warning">Total Late: 2</button>
-        <hr>
-      </div>
-    </div>
+    <h1 style="margin-left: 10px; font-size: 50px; " class="text text-info">Home</h1>
+    <div class="button" style="margin-top: 25px; position: absolute;">
     </div>
   </div>
 
-  <div class="rrrrr"
-    style="display: flex;  justify-content: center; position: absolute; right: 0; margin-top: 60px; margin-right: 30px;">
-    <div class="qr-box alert alert-info" id="qrgenerator"  style="display: none ;">
+  <div class="QR-Code none" id="QR-Scanner"
+    style="display: flex;  justify-content: center; position: absolute; left:  0; margin-top: 50px; border-right: none; margin-right: 30px;">
+    <div class="qr-box " id="qrgenerator">
       <div>
         <label for="usr" class="text-dark"></label>
         <input type="text" class="form-control" id="text" name="username" placeholder="Enter Text Here"
           style="display: none;" disabled>
         <input type="text" class="form-control" id="studentNo" name="studentNo" style="display: none;"
           placeholder="Enter Text Here" disabled>
-        <div class="btn" style="display: flex; justify-content: center;">
-          <a href="javascript:void(0)" class="btn btn-primary btn-lg my-4" onclick="generate();"> View Qr-code </a>
+        <div class="alert alert-info" style="display: flex; height: 120px;  justify-content: center;" onclick="Close()">
+          <div>
+            <a href="javascript:void(0)" class="btn btn-primary btn-lg my-4" onclick="generate();"> View Qr-code </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="qr-box alert alert-info" id="dBtn">
-      <div id="placeHolder"> </div>
-      <canvas id="myCanvas"> </canvas>
+    <div class="alert alert-info" id="dBtn" style=" width: 230px; height: 200px;">
+      <div style="display: flex; justify-content: center;">
+        <div id="placeHolder"> </div>
+        <canvas id="myCanvas"> </canvas>
+      </div>
       <br>
-      <div class="btn" style="display: flex; justify-content: center;">
+      <div class="btn" style="display: flex; justify-content:center; margin-top: -70px;">
         <a href="#" class="btn btn-danger btn-lg my-4" onclick="downloadQrCode(this);" download="QRcode.png"> Download
         </a>
+      </div>
+    </div>
+    <!-- arrow  -->
+    <div class="QR-control alert alert-info" style="margin-top: 60px; height: 70px;" onclick="tableClick()">
+      <i class="fa fa-qrcode" aria-hidden="true" style="font-size: 30px; margin-top: 10px;"></i>
+      <span>QR-Code</span>
+    </div>
 
-      </div>
-    </div>
   </div>
-  <div class="excuese alert alert-info" style="margin-left: 20px;">
-    <label for="" style="text-align: center;">Upload Your excuse letter, txt,docx, pic and 3MB can upload only:</label>
-    <br>
-    <div>
-      <label class="btn btn-info" for="files">Upload <i class="fa fa-upload" aria-hidden="true"></i></label>
-    </div>
-    <div>
-      <div>
-        <label class="btn btn-success">View Schedule <i class='far fa-calendar-check'></i></label>
-      </div>
-    </div>
-    <input type="file" class="hidden" id="files">
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <script>
+    function Close() {
+      const text = document.getElementById("dBtn")
+      if (text.classList.contains('none')) {
+        text.classList.remove('none')
+        text.classList.add('block')
+      }
+      else {
+        text.classList.remove('block')
+        text.classList.add('none')
+
+      }
+
+
+    }
+
+
+    function tableClick() {
+      const text = document.getElementById("QR-Scanner");
+      if (text.classList.contains('none')) {
+        text.classList.remove('none');
+        text.classList.add('block');
+      }
+      else {
+        text.classList.remove('block');
+        text.classList.add('none');
+        setTimeout(function () {
+          location.reload();
+        }, 1000);
+      }
+    }
+
+    function Schedule() {
+      const text = document.getElementById("Schedule")
+
+
+      if (text.classList.contains('none')) {
+
+
+
+        text.classList.remove('none')
+        text.classList.add('block')
+      }
+      else {
+        text.classList.remove('block')
+        text.classList.add('none')
+
+      }
+
+    }
+
+    function Excuse() {
+      const text = document.getElementById("excuse")
+
+
+      if (text.classList.contains('none')) {
+
+
+
+        text.classList.remove('none')
+        text.classList.add('block')
+      }
+      else {
+        text.classList.remove('block')
+        text.classList.add('none')
+
+      }
+
+    }
+  </script>
   <style>
-    table thead th,
-    td {
+    .excuese {
+      top: 200px;
+
+    }
+
+    .excuese .arrow-upload {
+      margin-top: -190px;
+      margin-left: 200px;
+    }
+
+    .excuese .arrow-upload span {
+      position: absolute;
+      margin-left: 210px;
+      width: 130px;
+      padding: 5px;
+      background-color: rgb(131, 131, 131);
+      color: white;
+      border-radius: 5px;
       text-align: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .excuese .arrow-upload:hover span {
+      opacity: 1;
+      pointer-events: none;
     }
   </style>
-  <div class="table" style="margin-top: 20vh; display: flex; justify-content: center;">
-    <table class="table table-bordered table-info" style="width: 89%;">
+
+  <div id="excuse" class="excuese none" style="position: absolute; left: 0; margin-top: 160px;">
+    <div class="alert alert-info" style="display: block;">
+      <label for="" style="text-align: center;">Upload Your excuse letter, txt,docx, or atleast 5 pictures and 3MB can
+        upload
+        only:</label>
+      <br>
+      <div>
+        <label class="btn btn-info" for="files">Upload <i class="fa fa-upload" aria-hidden="true"></i></label>
+      </div>
+      <input type="file" class="hidden" id="files">
+    </div>
+    <div class="arrow-upload alert alert-info" style="width: 70px;" onclick="Excuse()">
+      <label class=""> <i class="fa fa-upload" style="font-size: 25px;" id="Exc" aria-hidden="true"></i></label>
+      <span>Upload Excuse</span>
+    </div>
+  </div>
+
+
+  <!-- calendar -->
+  <div class="calendar none" id="Schedule">
+    <div class=" alert alert-info View">
+      <label class="btn btn-success">
+        <p>View Schedule </p>
+      </label>
+    </div>
+    <div onclick="Schedule()" class="arrow-schedule alert alert-info">
+      <label class=""><i class='far fa-calendar-check' style="font-size: 30px;"></i></label>
+      <span>Schedule</span>
+    </div>
+  </div>
+
+  <!-- title of semester -->
+  <div class="table" style=" display: flex; justify-content: center;">
+    <table>
+      <tr>
+        <thead>
+          <th>Summary Attendance Per Term</th>
+        </thead>
+      </tr>
+    </table>
+  </div>
+
+  <div class="table" style=" display: flex; justify-content: center;">
+    <table class="table table-bordered table-info" style="width: 70%;">
+      <thead style="background-color: aqua;">
+        <th>1st Term</th>
+        <th>1st Final Term</th>
+        <th>2nd Term</th>
+        <th>2nd Final term</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><button class="btn btn-info">View</button></td>
+          <td><button class="btn btn-info">View</button></td>
+          <td><button class="btn btn-info">View</button></td>
+          <td><a><button class="btn btn-info">View</button></a></td>
+        </tr>
+        <!-- subject2 -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- title of student -->
+  <div class="table" style=" display: flex; justify-content: center;">
+    <table>
+      <tr>
+        <thead>
+          <th>Attendance Per Subject</th>
+        </thead>
+      </tr>
+    </table>
+  </div>
+
+  <div class="table" style=" display: flex; justify-content: center;">
+    <table class="table table-bordered table-info" style="width: 70%;">
       <thead style="background-color: aqua;">
         <th>Teacher Name</th>
         <th>Subject</th>
@@ -187,7 +317,7 @@
 
 
   <script src="/javascript/generator.js">
-   
+
   </script>
   <script src="../javascript/student/home-student.js"></script>
 </body>

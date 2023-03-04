@@ -19,8 +19,9 @@
    
    const email = document.getElementById('email');
    const password = document.getElementById('password');
-   const studentC = document.getElementById("create")
-   const button = document.getElementById('button')
+   const studentC = document.getElementById("create");
+   const button = document.getElementById('button');
+   const name = document.getElementById('name')
 
    function validateForm() {
     const email = document.getElementById("email");
@@ -119,15 +120,16 @@ window.onload = function () {
         userlink.innerText = currentUser.stdNo;
         header.innerText = currentUser.name;
         studentC.value = currentUser.stdNo;
+        name.innerHTML = currentUser.name;
         userlink.classList.replace("nav-link", "btn");
-        userlink.classList.add("btn-primary");
+        // userlink.classList.add("btn-primary");
         // userlink.href = "profile.html";
 
 
 
-        signoutlink.innerText = "Sign Out";
+        // signoutlink.innerText = "Sign Out";
         signoutlink.classList.replace("nav-link", "btn");
-        signoutlink.classList.add("btn-info");
+        // signoutlink.classList.add("btn-info");
         signoutlink.href = "javascript:Signout()";
     }
 
