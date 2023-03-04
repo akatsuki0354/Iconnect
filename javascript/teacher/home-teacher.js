@@ -3,6 +3,7 @@ let userlink = document.getElementById('userlink');
 let signoutlink = document.getElementById('signoutlink');
 let header = document.getElementById('hh');
 let name = document.getElementById('name')
+let Teacher = document.getElementById("teacherName");
 
 
 var currentUser = null;
@@ -42,6 +43,7 @@ window.onload = function () {
         userlink.innerText = currentUser.stdNo;
         header.innerText = currentUser.name;
         name.innerText = currentUser.name;
+        Teacher.innerHTML = currentUser.stdNo;
         userlink.classList.replace("nav-link", "btn");
         // userlink.classList.add("");
         // userlink.href = "profile.html";

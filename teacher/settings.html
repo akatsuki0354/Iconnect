@@ -2,19 +2,50 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/Style/teacher/teacherhome.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="/img/icon.png">
-    <link rel="stylesheet" href="/Style/teacher/settings.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <Title>ICONnect</Title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/Style/teacher/teacherhome.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="/img/icon.png">
+  <link rel="stylesheet" href="/Style/teacher/settings.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <Title>ICONnect</Title>
 </head>
 
 <body>
+  <script>
+    function notification() {
+         const text = document.getElementById("notification")
+         const body = document.getElementById("notification-nav")
+ 
+         if (text.classList.contains('nav-none')) {
+           text.classList.remove('nav-none')
+           text.classList.add('.nav-block')
+ 
+           body.classList.remove('nav-none')
+           body.classList.add('.nav-block')
+         }
+         else {
+           text.classList.remove('.nav-block')
+           text.classList.add('nav-none')
+ 
+           body.classList.remove('.nav-block')
+           body.classList.add('nav-none')
+         }
+ 
+       }
+ </script>
+ <style>
+  .nav-block{
+    display: block;
+  }
+
+  .nav-none{
+    display: none;
+  }
+</style>
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
     <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
       <div class="img-logo" style="display: flex;">
@@ -29,19 +60,44 @@
     </div>
     <div style="display: flex;">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!-- notification -->
-      <a href="" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
-        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
-        <span
-          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></a>
+     
       <!-- Messanger -->
       <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
         style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
-          style="font-size: 20px;" aria-hidden="true"><span class="span"  style="margin-left: -55px;">Message</span></i></a>
+          style="font-size: 20px;" aria-hidden="true"><span class="span"
+            style="margin-left: -55px;">Message</span></i></a>
       <!-- Home -->
       <a href="/teacher/teacherhome.html" class="btn btn-dark"
-        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home"
+        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
           style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+
+           <!-- notification -->
+      <button onclick="notification()" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
+        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
+        <span
+          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></button>
+          <!-- nav-notification  -->
+          <div id="notification"  class="triangle-up nav-none"></div>
+          <div id="notification-nav" class="notification-nav nav-none">
+           
+            <!-- notification-content -->
+           <div class="notification-content">
+            <!-- title-->
+            <div class="title">
+              <h4>Notification</h4>
+              <hr>
+            </div>
+            <!-- title 0f content -->
+            <div class="title-content">
+              <h5>ICONnect</h5>
+            </div>
+            <!-- body of content -->
+            <div class="body">
+              <p>Hello <span id="teacherName"></span> You are now Register In to ICONnect</p>
+            </div>
+            <hr>
+           </div>
+          </div>
       <!-- nameof teacher -->
       <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
       <!-- Profile   -->
@@ -50,7 +106,6 @@
           <i class="fa fa-user"></i>
         </p>
       </div>
-
       <div class="dropdown">
         <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
             style='font-size:25px; margin-top: 10px;'></i></a>
@@ -59,216 +114,232 @@
       </div>
     </div>
   </nav>
-    <style>
-        .navbar-select {
-          width: 230px;
-          background-color: rgb(150, 150, 150);
-          margin-top: 0px;
-          padding: 10px;
-          /* text-align: center; */
-          height: 90vh;
-          transition: 0.5s;
-          position: absolute;
-          left: 0;
-        }
-    
-        .navbar-select a {
-          color: white;
-          width: 100%;
-        }
-    
-        .navbar-select a:hover {
-          text-decoration: none;
-        }
-    
-        .left {
-          margin-left: -200px;
-        }
-    
-    
-    
-        li {
-          list-style-type: none;
-          width: 100%;
-          width: 100%;
-          padding: 10px;
-          margin-top: 10px;
-        }
-    
-        li i {
-          color: rgb(226, 226, 226);
-        }
-    
-        li:hover {
-          background-color: rgb(102, 102, 102);
-        }
-    
-        /* pulsar */
-    
-        .pulsar {
-          --uib-size: 20px;
-          --uib-speed: 3s;
-          --uib-color: rgb(0, 221, 0);
-          position: relative;
-          height: var(--uib-size);
-          width: var(--uib-size);
-        }
-    
-        .pulsar::before,
-        .pulsar::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          border-radius: 50%;
-          background-color: var(--uib-color);
-          animation: pulse9173412 var(--uib-speed) ease-in-out infinite;
-          transform: scale(0);
-        }
-    
-        .pulsar::after {
-          animation-delay: calc(var(--uib-speed) / -2);
-        }
-    
-        @keyframes pulse9173412 {
-    
-          0%,
-          100% {
-            transform: scale(0);
-            opacity: 1;
-          }
-    
-          50% {
-            transform: scale(1);
-            opacity: 0.25;
-          }
-        }
-      </style>
-    
-    <div class="main">
-      <!-- dashboard -->
-      <div class="navbar-select" id="navbar">
-    
-        <div class="img" style="display: flex; justify-content: center;">
-          <div>
-            <div class="profile" style="width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
-              <i class="fa fa-user"></i>
-            </div>
-            <div class="pulsar"></div>
-          </div>
-          <label for="files"><i class="fa fa-camera" aria-hidden="true"></i></label>
-          <input style="display: none;" type="file" class="hidden" id="files">
-        </div>
-        <li>
-          <i class="fa fa-user" style="font-size: 25px;"></i>
-          <a id="hh" href="#">ICONnect</a>
-        </li>
-        <hr>
-        <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
-          href="/teacher/manual.html">Manual</a></li>
-        <hr>
-        <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
-            href="QR-Attendance.html">QR-Attendance</a></li>
-        <hr>
-        <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
-            href="/teacher/settings.html">Setting</a></li>
-        <hr>
-        <li style="display: none;">
-          <a id="userlink" class="nav-link user" href="">Username</a>
-        </li>
-      </div>
-      <script>
-        function navbar() {
-          const text = document.getElementById("navbar")
-    
-          if (text.classList.contains('left')) {
-            text.classList.remove('left')
-            text.classList.add('right')
-          }
-          else {
-            text.classList.remove('right')
-            text.classList.add('left')
-          }
-    
-        }
-      </script>
-    
-    
-      <div onclick="navbar()" class="dashboard"
-        style="margin-top: -20px; cursor: pointer; position: absolute; left: 0; color: white; z-index: 2;"><i class="fa fa-bars"
-          style=" font-size: 25px; margin-top: 20px; padding: 5px;"> <span>Dashboard</span></i></div>
-    </div>
-    <div class="main">
-        <div class="choose">
-            <div class="logo">
-                <div class="title">
-                    <h1>Settings</h1>
-                </div>
-                <i class="fa fa-user-circle" onclick="tableClick()" aria-hidden="true" style="font-size: 25px;"> <span
-                        id="hh" href="#">Profile</span></i>
-                <hr>
-                <i class="fa fa-lock" onclick="tableClick()" aria-hidden="true" style="font-size: 25px;"><span>
-                        Privacy</span></i>
-                <hr>
-                <i class="fa fa-shield" style="font-size:25px"><span> Security Login</span></i>
-                <hr>
-                <i class="fa fa-moon-o" style="font-size:25px" aria-hidden="true"> Dark Mode</i>
-                <hr>
-            </div>
-        </div>
+  <style>
+    .navbar-select {
+      width: 230px;
+      background-color: rgb(150, 150, 150);
+      margin-top: 0px;
+      padding: 10px;
+      /* text-align: center; */
+      height: 90vh;
+      transition: 0.5s;
+      position: absolute;
+      left: 0;
+    }
 
-        <!-- Profile -->
-        <div class="profile none" id="hello">
-            <div class="title bg bg-dark">
-                <h1>Profile</h1>
-            </div>
-            <div class="input">
-                <div class="edit" style="display: flex; justify-content: space-between;">
-                    <h5>Name:</h5>
-                    <p id="editname"></p>
-                    <div>
-                        <a href="">Edit</a>
-                    </div>
-                </div>
-                <hr>
-                <div class="edit" style="display: flex; justify-content: space-between;">
-                    <h5>Teacher No.:</h5>
-                    <p id="editNo"></p>
-                    <div>
-                        <a href="">Edit</a>
-                    </div>
-                </div>
-                <hr>
-                <div class="edit" style="display: flex; justify-content: space-between;">
-                  <h5>Email.:</h5>
-                  <p id="email"></p>
-                  <div>
-                      <a href="">Edit</a>
-                  </div>
-              </div>
-              <hr>
-                <span style="font-size: 15px; color: grey; margin-left: 10px;">©:ICONnect 2023</span>
-            </div>
+    .navbar-select a {
+      color: white;
+      width: 100%;
+    }
+
+    .navbar-select a:hover {
+      text-decoration: none;
+    }
+
+    .left {
+      margin-left: -200px;
+    }
+
+
+
+    li {
+      list-style-type: none;
+      width: 100%;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    li i {
+      color: rgb(226, 226, 226);
+    }
+
+    li:hover {
+      background-color: rgb(102, 102, 102);
+    }
+
+    /* pulsar */
+
+    .pulsar {
+      --uib-size: 20px;
+      --uib-speed: 3s;
+      --uib-color: rgb(0, 221, 0);
+      position: relative;
+      height: var(--uib-size);
+      width: var(--uib-size);
+    }
+
+    .pulsar::before,
+    .pulsar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-color: var(--uib-color);
+      animation: pulse9173412 var(--uib-speed) ease-in-out infinite;
+      transform: scale(0);
+    }
+
+    .pulsar::after {
+      animation-delay: calc(var(--uib-speed) / -2);
+    }
+
+    @keyframes pulse9173412 {
+
+      0%,
+      100% {
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1);
+        opacity: 0.25;
+      }
+    }
+  </style>
+
+  <div class="main">
+    <!-- dashboard -->
+    <div class="navbar-select" id="navbar">
+
+      <div class="img" style="display: flex; justify-content: center;">
+        <div>
+          <div class="profile" style="width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="pulsar"></div>
         </div>
-        <!-- Privacy Policy -->
-        <div class="profile none"  id="hi">
-            <div class="title bg bg-dark">
-                <h1>Privacy Policy</h1>
-            </div>
-            <div class="privacy">
-                <h3>What is the Privacy Policy and what does it cover?</h3>
-                <p>
-                    Effective January 1, 2023 |<br>
-                    ICONnect wants you to understand the data we gathered, how we use it, and with whom we share it. You should read our Privacy and Policy about ICONnect. This enables you to utilize the ICONnect website in the most effective manner possible.
-                    <br>
-                    <br>
-                    In the Privacy Policy, we'll explain how we collect, use, share, retain, and transfer information. We'll also let you know your rights. Each section of the policy includes helpful examples and simpler language to make our practices easier to understand. We'd also added links to resources where you can learn more about the privacy topics that interest you. It's important to us that you know how to control your privacy, so we also show you where you can manage your information in the settings of the ICONnect website you use. You can shape/share your experience.
-                    <br>
-                    <br>
-                </p>
-                <!-- <h3>Protecting Privacy</h3>
+        <label for="files"><i class="fa fa-camera" aria-hidden="true"></i></label>
+        <input style="display: none;" type="file" class="hidden" id="files">
+      </div>
+      <!-- users -->
+      <li>
+        <i class="fa fa-user" style="font-size: 25px;"></i>
+        <a id="hh" href="#">ICONnect</a>
+      </li>
+      <hr>
+      <!-- Home -->
+      <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a href="/teacher/teacherhome.html">
+          Home</a></li>
+
+      <hr>
+      <!-- Manual -->
+      <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
+          href="/teacher/manual.html">Manual</a></li>
+      <hr>
+      <!-- QR-Attendance -->
+      <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
+          href="QR-Attendance.html">QR-Attendance</a></li>
+      <hr>
+      <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
+          href="/teacher/settings.html">Settings</a></li>
+      <hr>
+
+      <li style="display: none;">
+        <a id="userlink" class="nav-link user" href="">Username</a>
+      </li>
+    </div>
+    <script>
+      function navbar() {
+        const text = document.getElementById("navbar")
+
+        if (text.classList.contains('left')) {
+          text.classList.remove('left')
+          text.classList.add('right')
+        }
+        else {
+          text.classList.remove('right')
+          text.classList.add('left')
+        }
+
+      }
+    </script>
+
+
+    <div onclick="navbar()" class="dashboard"
+      style="margin-top: -20px; cursor: pointer; position: absolute; left: 0; color: white; z-index: 2;"><i
+        class="fa fa-bars" style=" font-size: 25px; margin-top: 20px; padding: 5px;"> <span>Dashboard</span></i></div>
+  </div>
+  <div class="main">
+    <div class="choose">
+      <div class="logo">
+        <div class="title">
+          <h1>Settings</h1>
+        </div>
+        <i class="fa fa-user-circle" onclick="tableClick()" aria-hidden="true" style="font-size: 25px;"> <span id="hh"
+            href="#">Profile</span></i>
+        <hr>
+        <i class="fa fa-lock" onclick="tableClick()" aria-hidden="true" style="font-size: 25px;"><span>
+            Privacy</span></i>
+        <hr>
+        <i class="fa fa-shield" style="font-size:25px"><span> Security Login</span></i>
+        <hr>
+        <i class="fa fa-moon-o" style="font-size:25px" aria-hidden="true"> Dark Mode</i>
+        <hr>
+      </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="profile none" id="hello">
+      <div class="title bg bg-dark">
+        <h1>Profile</h1>
+      </div>
+      <div class="input">
+        <div class="edit" style="display: flex; justify-content: space-between;">
+          <h5>Name:</h5>
+          <p id="editname"></p>
+          <div>
+            <a href="">Edit</a>
+          </div>
+        </div>
+        <hr>
+        <div class="edit" style="display: flex; justify-content: space-between;">
+          <h5>Teacher No.:</h5>
+          <p id="editNo"></p>
+          <div>
+            <a href="">Edit</a>
+          </div>
+        </div>
+        <hr>
+        <div class="edit" style="display: flex; justify-content: space-between;">
+          <h5>Email.:</h5>
+          <p id="email"></p>
+          <div>
+            <a href="">Edit</a>
+          </div>
+        </div>
+        <hr>
+        <span style="font-size: 15px; color: grey; margin-left: 10px;">©:ICONnect 2023</span>
+      </div>
+    </div>
+    <!-- Privacy Policy -->
+    <div class="profile none" id="hi">
+      <div class="title bg bg-dark">
+        <h1>Privacy Policy</h1>
+      </div>
+      <div class="privacy">
+        <h3>What is the Privacy Policy and what does it cover?</h3>
+        <p>
+          Effective January 1, 2023 |<br>
+          ICONnect wants you to understand the data we gathered, how we use it, and with whom we share it. You should
+          read our Privacy and Policy about ICONnect. This enables you to utilize the ICONnect website in the most
+          effective manner possible.
+          <br>
+          <br>
+          In the Privacy Policy, we'll explain how we collect, use, share, retain, and transfer information. We'll also
+          let you know your rights. Each section of the policy includes helpful examples and simpler language to make
+          our practices easier to understand. We'd also added links to resources where you can learn more about the
+          privacy topics that interest you. It's important to us that you know how to control your privacy, so we also
+          show you where you can manage your information in the settings of the ICONnect website you use. You can
+          shape/share your experience.
+          <br>
+          <br>
+        </p>
+        <!-- <h3>Protecting Privacy</h3>
                 <p>
                     <span>Password:</span> We are increpting your password for your more security in your account.
                 </p>
@@ -288,34 +359,34 @@
                 <p>
                     <span>Phishing: </span> Always check the link if it is right page  like this <a href="">ICONnect</a>
                 </p> -->
-            </div>
-        </div>
+      </div>
     </div>
-    </div>
-    <div class="form">
-        <script src="/javascript/teacher/settings.js"></script>
+  </div>
+  </div>
+  <div class="form">
+    <script src="/javascript/teacher/settings.js"></script>
 
 
-        <script>
-            function tableClick() {
-                const text = document.getElementById("hello")
-                const privacy = document.getElementById("hi")
-                if (text.classList.contains('none')) {
-                    text.classList.remove('none')
-                    text.classList.add('block')
+    <script>
+      function tableClick() {
+        const text = document.getElementById("hello")
+        const privacy = document.getElementById("hi")
+        if (text.classList.contains('none')) {
+          text.classList.remove('none')
+          text.classList.add('block')
 
-                    privacy.classList.remove('block')
-                    privacy.classList.add('none')
-                }
-                else {
-                    text.classList.remove('block')
-                    text.classList.add('none')
+          privacy.classList.remove('block')
+          privacy.classList.add('none')
+        }
+        else {
+          text.classList.remove('block')
+          text.classList.add('none')
 
-                   privacy.classList.remove('none')
-                   privacy.classList.add('block')
-                }
+          privacy.classList.remove('none')
+          privacy.classList.add('block')
+        }
 
-            }
+      }
 
 
             // function tableClicks() {
@@ -331,23 +402,23 @@
             //     }
 
             // }
-        </script>
+    </script>
 
-        <style>
-            .none {
-                display: none;
-            }
+    <style>
+      .none {
+        display: none;
+      }
 
-            .block {
-                display: block;
+      .block {
+        display: block;
 
-            }
-        </style>
-
-
+      }
+    </style>
 
 
-        <script src="/javascript/teacher/home-teacher.js"></script>
+
+
+    <script src="/javascript/teacher/home-teacher.js"></script>
 </body>
 
 </html>
