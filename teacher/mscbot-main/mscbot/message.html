@@ -22,6 +22,37 @@
 </head>
 
 <body>
+  <style>
+    .nav-block {
+      display: block;
+    }
+
+    .nav-none {
+      display: none;
+    }
+  </style>
+  <script>
+    function notification() {
+      const text = document.getElementById("notification")
+      const body = document.getElementById("notification-nav")
+
+      if (text.classList.contains('nav-none')) {
+        text.classList.remove('nav-none')
+        text.classList.add('.nav-block')
+
+        body.classList.remove('nav-none')
+        body.classList.add('.nav-block')
+      }
+      else {
+        text.classList.remove('.nav-block')
+        text.classList.add('nav-none')
+
+        body.classList.remove('.nav-block')
+        body.classList.add('nav-none')
+      }
+
+    }
+  </script>
 
   <script src="/javascript/teacher/home-teacher.js" type="module"></script>
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
@@ -38,19 +69,44 @@
     </div>
     <div style="display: flex;">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!-- notification -->
-      <a href="" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
-        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
-        <span
-          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></a>
+       <!-- Home -->
+       <a href="/teacher/teacherhome.html" class="btn btn-dark"
+       style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
+         style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+
       <!-- Messanger -->
       <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
         style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
-          style="font-size: 20px;" aria-hidden="true"><span class="span"  style="margin-left: -55px;">Message</span></i></a>
-      <!-- Home -->
-      <a href="/teacher/teacherhome.html" class="btn btn-dark"
-        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home"
-          style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+          style="font-size: 20px;" aria-hidden="true"><span class="span"
+            style="margin-left: -55px;">Message</span></i></a>
+    
+           <!-- notification -->
+      <button onclick="notification()" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
+        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
+        <span
+          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></button>
+          <!-- nav-notification  -->
+          <div id="notification"  class="triangle-up nav-none"></div>
+          <div id="notification-nav" class="notification-nav nav-none">
+           
+            <!-- notification-content -->
+           <div class="notification-content">
+            <!-- title-->
+            <div class="title">
+              <h4>Notification</h4>
+              <hr>
+            </div>
+            <!-- title 0f content -->
+            <div class="title-content">
+              <h5>ICONnect</h5>
+            </div>
+            <!-- body of content -->
+            <div class="body">
+              <p>Hello <span id="teacherName"></span> You are now Register In to ICONnect</p>
+            </div>
+            <hr>
+           </div>
+          </div>
       <!-- nameof teacher -->
       <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
       <!-- Profile   -->
@@ -59,7 +115,6 @@
           <i class="fa fa-user"></i>
         </p>
       </div>
-
       <div class="dropdown">
         <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
             style='font-size:25px; margin-top: 10px;'></i></a>
@@ -68,6 +123,7 @@
       </div>
     </div>
   </nav>
+
 
 
 

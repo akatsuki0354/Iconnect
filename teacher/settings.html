@@ -17,35 +17,35 @@
 <body>
   <script>
     function notification() {
-         const text = document.getElementById("notification")
-         const body = document.getElementById("notification-nav")
- 
-         if (text.classList.contains('nav-none')) {
-           text.classList.remove('nav-none')
-           text.classList.add('.nav-block')
- 
-           body.classList.remove('nav-none')
-           body.classList.add('.nav-block')
-         }
-         else {
-           text.classList.remove('.nav-block')
-           text.classList.add('nav-none')
- 
-           body.classList.remove('.nav-block')
-           body.classList.add('nav-none')
-         }
- 
-       }
- </script>
- <style>
-  .nav-block{
-    display: block;
-  }
+      const text = document.getElementById("notification")
+      const body = document.getElementById("notification-nav")
 
-  .nav-none{
-    display: none;
-  }
-</style>
+      if (text.classList.contains('nav-none')) {
+        text.classList.remove('nav-none')
+        text.classList.add('.nav-block')
+
+        body.classList.remove('nav-none')
+        body.classList.add('.nav-block')
+      }
+      else {
+        text.classList.remove('.nav-block')
+        text.classList.add('nav-none')
+
+        body.classList.remove('.nav-block')
+        body.classList.add('nav-none')
+      }
+
+    }
+  </script>
+  <style>
+    .nav-block {
+      display: block;
+    }
+
+    .nav-none {
+      display: none;
+    }
+  </style>
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
     <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
       <div class="img-logo" style="display: flex;">
@@ -60,17 +60,17 @@
     </div>
     <div style="display: flex;">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     
+       <!-- Home -->
+       <a href="/teacher/teacherhome.html" class="btn btn-dark"
+       style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
+         style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+
       <!-- Messanger -->
       <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
         style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
           style="font-size: 20px;" aria-hidden="true"><span class="span"
             style="margin-left: -55px;">Message</span></i></a>
-      <!-- Home -->
-      <a href="/teacher/teacherhome.html" class="btn btn-dark"
-        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
-          style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
-
+    
            <!-- notification -->
       <button onclick="notification()" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
         <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
@@ -208,19 +208,26 @@
 
       <div class="img" style="display: flex; justify-content: center;">
         <div>
-          <div class="profile" style="width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+          <div class="profile"
+            style="z-index: 1; position: relative; width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+            <img src="" alt="" style="position: relative; z-index: 1; width: 100px; height: 100px; border-radius: 100%;"
+              id="myimg" /><span id="extlab"></span>
             <i class="fa fa-user"></i>
           </div>
           <div class="pulsar"></div>
         </div>
-        <label for="files"><i class="fa fa-camera" aria-hidden="true"></i></label>
-        <input style="display: none;" type="file" class="hidden" id="files">
+        <!-- upoload and select for profile -->
+        <label id="select"><i class="fa fa-camera" aria-hidden="true"></i></label>
+        <label id="upload"><i class="fa fa-upload" aria-hidden="true"></i></label>
+        <input style="display: none;" type="text" id="namebox" />
+        <input style="display: none;" type="text" id="youranme" placeholder="your file name">
+        <button style="display: none;" id="retrieve">Retrieve</button>
+        <script src="/javascript/teacher/teacherimage.js" type="module"></script>
+        <span id="progress"></span>
       </div>
       <!-- users -->
-      <li>
-        <i class="fa fa-user" style="font-size: 25px;"></i>
-        <a id="hh" href="#">ICONnect</a>
-      </li>
+      <i class="fa fa-user" style="color: white; margin-left: 10px; font-size: 25px;"></i>
+      <span style="color: white;" id="hh" href="#">ICONnect</span>
       <hr>
       <!-- Home -->
       <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a href="/teacher/teacherhome.html">

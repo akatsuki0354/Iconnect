@@ -55,6 +55,12 @@ nav .Profile i{
 
 /* DashBoard */
 
+#progress{
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
 nav i{
   text-align: center;
 }
@@ -97,9 +103,11 @@ nav .btn:hover i span{
 
 .navbar-select .img .profile i{
   font-size: 85px;
-  margin-top: 20px;
+  top: -85px;
+   
   margin-left: 10px;
   color: gray;
+  position: relative;
 }
 
 .dashboard i:hover span{
@@ -110,8 +118,9 @@ nav .btn:hover i span{
 }
 
 
-.navbar-select  .fa-camera{
+.navbar-select  .fa-camera, .fa-upload{
   position: relative;
+  z-index: 999;
   top: 75px;
   font-size: 15px;
   margin-left: -30px;
@@ -123,6 +132,10 @@ nav .btn:hover i span{
   cursor: pointer;
 }
 
+.fa-upload{
+  z-index: 1;
+  margin-left: -0px;
+}
 
 .nav-fas{
   background-color: rgb(7, 150, 150);

@@ -4,6 +4,9 @@ let signoutlink = document.getElementById('signoutlink');
 let header = document.getElementById('hh');
 let name = document.getElementById('name')
 let Teacher = document.getElementById("teacherName");
+let Yname = document.getElementById("youranme")
+let Retrive = document.getElementById("myimg")
+
 
 
 var currentUser = null;
@@ -26,6 +29,16 @@ function Signout() {
     window.location = "teacherlogin.html";
 }
 
+// async function retrieveImage() {
+//     // Retrieve the download URL for the image
+//     const storageRef = sRef(storage, "Image/" + currentUser.stdNo + ".jpg");
+//     const downloadURL = await getDownloadURL(storageRef);
+
+//     // Set the download URL as the source of the image
+//     const imgElement = document.getElementById("myimg");
+//     imgElement.src = downloadURL;
+// }
+
 window.onload = function () {
     getUsername();
     if (currentUser == null) {
@@ -43,7 +56,10 @@ window.onload = function () {
         userlink.innerText = currentUser.stdNo;
         header.innerText = currentUser.name;
         name.innerText = currentUser.name;
-        Teacher.innerHTML = currentUser.stdNo;
+        Teacher.innerHTML = currentUser.name;
+        Yname.value = currentUser.stdNo;
+        Retrive.src = currentUser.ImageURL;
+      
         userlink.classList.replace("nav-link", "btn");
         // userlink.classList.add("");
         // userlink.href = "profile.html";

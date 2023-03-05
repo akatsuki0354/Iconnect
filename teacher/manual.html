@@ -49,75 +49,74 @@
     display: none;
   }
 </style>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
-    <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
-      <div class="img-logo" style="display: flex;">
-        <img src="/img/icon.png" alt="" style="width: 70px; height: 70px; margin-right: 10px;">
-        <div>
-          <h1>ICONnect</h1>
-          <p style="margin-top: -15px;">QR-Attendance Monitoring System</p>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
+  <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
+    <div class="img-logo" style="display: flex;">
+      <img src="/img/icon.png" alt="" style="width: 70px; height: 70px; margin-right: 10px;">
+      <div>
+        <h1>ICONnect</h1>
+        <p style="margin-top: -15px;">QR-Attendance Monitoring System</p>
       </div>
     </div>
-    <div class="homepage" style="display: flex; justify-content: center;">
-    </div>
-    <div style="display: flex;">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     
-      <!-- Messanger -->
-      <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
-        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
-          style="font-size: 20px;" aria-hidden="true"><span class="span"
-            style="margin-left: -55px;">Message</span></i></a>
-      <!-- Home -->
-      <a href="/teacher/teacherhome.html" class="btn btn-dark"
-        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
-          style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+  </div>
+  <div class="homepage" style="display: flex; justify-content: center;">
+  </div>
+  <div style="display: flex;">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Home -->
+     <a href="/teacher/teacherhome.html" class="btn btn-dark"
+     style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
+       style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
 
-           <!-- notification -->
-      <button onclick="notification()" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
-        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
-        <span
-          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></button>
-          <!-- nav-notification  -->
-          <div id="notification"  class="triangle-up nav-none"></div>
-          <div id="notification-nav" class="notification-nav nav-none">
-           
-            <!-- notification-content -->
-           <div class="notification-content">
-            <!-- title-->
-            <div class="title">
-              <h4>Notification</h4>
-              <hr>
-            </div>
-            <!-- title 0f content -->
-            <div class="title-content">
-              <h5>ICONnect</h5>
-            </div>
-            <!-- body of content -->
-            <div class="body">
-              <p>Hello <span id="teacherName"></span> You are now Register In to ICONnect</p>
-            </div>
+    <!-- Messanger -->
+    <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
+      style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
+        style="font-size: 20px;" aria-hidden="true"><span class="span"
+          style="margin-left: -55px;">Message</span></i></a>
+  
+         <!-- notification -->
+    <button onclick="notification()" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
+      <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
+      <span
+        style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></button>
+        <!-- nav-notification  -->
+        <div id="notification"  class="triangle-up nav-none"></div>
+        <div id="notification-nav" class="notification-nav nav-none">
+         
+          <!-- notification-content -->
+         <div class="notification-content">
+          <!-- title-->
+          <div class="title">
+            <h4>Notification</h4>
             <hr>
-           </div>
           </div>
-      <!-- nameof teacher -->
-      <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
-      <!-- Profile   -->
-      <div class="Profile">
-        <p style="margin-top: 20px;">
-          <i class="fa fa-user"></i>
-        </p>
-      </div>
-      <div class="dropdown">
-        <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
-            style='font-size:25px; margin-top: 10px;'></i></a>
-        <div class="dropdown-content">
+          <!-- title 0f content -->
+          <div class="title-content">
+            <h5>ICONnect</h5>
+          </div>
+          <!-- body of content -->
+          <div class="body">
+            <p>Hello <span id="teacherName"></span> You are now Register In to ICONnect</p>
+          </div>
+          <hr>
+         </div>
         </div>
+    <!-- nameof teacher -->
+    <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
+    <!-- Profile   -->
+    <div class="Profile">
+      <p style="margin-top: 20px;">
+        <i class="fa fa-user"></i>
+      </p>
+    </div>
+    <div class="dropdown">
+      <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
+          style='font-size:25px; margin-top: 10px;'></i></a>
+      <div class="dropdown-content">
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
   <style>
     .navbar-select {
       width: 580px;
@@ -209,44 +208,50 @@
  </div>
   <div class="main">
    <!-- dashboard -->
-   <div class="navbar-select" id="navbar">
+    <!-- dashboard -->
+    <div class="navbar-select" id="navbar">
 
-    <div class="img" style="display: flex; justify-content: center;">
-      <div>
-        <div class="profile" style="width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
-          <i class="fa fa-user"></i>
+      <div class="img" style="display: flex; justify-content: center;">
+        <div>
+          <div class="profile" style="z-index: 1; position: relative; width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+            <img src="" alt="" style="position: relative; z-index: 1; width: 100px; height: 100px; border-radius: 100%;" id="myimg"  /><span id="extlab"></span>
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="pulsar"></div>
         </div>
-        <div class="pulsar"></div>
+        <!-- upoload and select for profile -->
+        <label id="select"><i class="fa fa-camera" aria-hidden="true"></i></label>
+        <label id="upload"><i class="fa fa-upload" aria-hidden="true"></i></label>
+        <input style="display: none;" type="text" id="namebox" />
+        <input style="display: none;" type="text" id="youranme" placeholder="your file name">
+        <button style="display: none;" id="retrieve">Retrieve</button>
+        <script src="/javascript/teacher/teacherimage.js" type="module"></script>
+        <span id="progress"></span>      
       </div>
-      <label for="files"><i class="fa fa-camera" aria-hidden="true"></i></label>
-      <input style="display: none;" type="file" class="hidden" id="files">
-    </div>
-    <!-- users -->
-    <li>
-      <i class="fa fa-user" style="font-size: 25px;"></i>
-      <a id="hh" href="#">ICONnect</a>
-    </li>
-    <hr>
-    <!-- Home -->
-    <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a
-      href="/teacher/teacherhome.html"> Home</a></li>
-    
-    <hr>
-    <!-- Manual -->
-    <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
-        href="/teacher/manual.html">Manual</a></li>
-    <hr>
-    <!-- QR-Attendance -->
-    <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
-        href="QR-Attendance.html">QR-Attendance</a></li>
-    <hr>
-    <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
-        href="/teacher/settings.html">Settings</a></li>
-    <hr>
+      <!-- users -->
+      <i class="fa fa-user" style="color: white; margin-left: 10px; font-size: 25px;"></i>
+      <span style="color: white;" id="hh" href="#" >ICONnect</span>
+      <hr>
+      <!-- Home -->
+      <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a
+        href="/teacher/teacherhome.html"> Home</a></li>
+      
+      <hr>
+      <!-- Manual -->
+      <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
+          href="/teacher/manual.html">Manual</a></li>
+      <hr>
+      <!-- QR-Attendance -->
+      <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
+          href="QR-Attendance.html">QR-Attendance</a></li>
+      <hr>
+      <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
+          href="/teacher/settings.html">Settings</a></li>
+      <hr>
 
-    <li style="display: none;">
-      <a id="userlink" class="nav-link user" href="">Username</a>
-    </li>
+      <li style="display: none;">
+        <a id="userlink" class="nav-link user" href="">Username</a>
+      </li>
     </div>
     <script>
       function navbar() {
@@ -264,8 +269,9 @@
       }
     </script>
 
-    <div onclick="navbar()" style="margin-top: -80px; cursor: pointer; position: absolute; color: white;"><i
-        class="fa fa-bars" style=" font-size: 25px; margin-top: 20px; padding: 5px;"></i></div>
+<div onclick="navbar()" class="dashboard"
+style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: white; z-index: 2;"><i class="fa fa-bars"
+  style=" font-size: 25px;  padding: 5px;"> <span>Dashboard</span></i></div>
     <!-- table -->
     <div class="table section">
       <table class="table table-bordered table-primary" style="text-align: center; margin-top: 1px;">

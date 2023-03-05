@@ -53,3 +53,36 @@ window.onload = function(){
         signoutlink.href = "javascript:Signout()";
     }
 }
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fileInput = document.querySelector('#image');
+    const file = fileInput.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/upload-image');
+    xhr.send(formData);
+  });
+
+  const express = require('express');
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+const app = express();
+
+app.post('/upload-image', upload.single('image'), (req, res) => {
+  const file = req.file;
+  if (!file) {
+    res.status(400).send('No file uploaded.');
+    return;
+  }
+  // Do something with the uploaded file here.
+  res.send('File uploaded.');
+});
+
+app.listen(3000, () => {
+  console.log('Server started on port 3000.');
+});
+
+  
