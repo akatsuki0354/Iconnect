@@ -54,9 +54,9 @@ window.onload = function () {
     }
     else {
         userlink.innerText = currentUser.stdNo;
-        header.innerText = currentUser.name;
-        name.innerText = currentUser.name;
-        Teacher.innerHTML = currentUser.name;
+        header.innerText = currentUser.name +', '+ currentUser.FirstName +', '+currentUser.MiddleName;
+        name.innerText = currentUser.name +', '+ currentUser.FirstName +', '+currentUser.MiddleName;
+        Teacher.innerHTML = currentUser.name +', '+ currentUser.FirstName +', '+currentUser.MiddleName;
         Yname.value = currentUser.stdNo;
         Retrive.src = currentUser.ImageURL;
       

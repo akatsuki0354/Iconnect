@@ -41,12 +41,14 @@ window.onload = function () {
         signoutlink.href = "teacherlogin.html";
     }
     else {
+
+
         userlink.innerText = currentUser.stdNo;
-        header.innerText = currentUser.name;
-        name.innerText = currentUser.name;
+        header.innerText = currentUser.name +', '+ currentUser.FirstName +', '+currentUser.MiddleName;
+        name.innerText = currentUser.name +', '+ currentUser.FirstName +', '+currentUser.MiddleName;
         editNo.innerHTML = currentUser.stdNo;
         email.innerHTML = currentUser.email;
-        yourname.innerHTML = currentUser.name;
+        yourname.innerHTML = currentUser.name +', '+ currentUser.FirstName +', '+currentUser.MiddleName;
         userlink.classList.replace("nav-link", "btn");
         // userlink.classList.add("");
         // userlink.href = "profile.html";

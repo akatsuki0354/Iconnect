@@ -25,7 +25,7 @@
   }
 </style>
 
-<body>
+<body class="contain">
   <script>
     function notification() {
       const text = document.getElementById("notification")
@@ -78,7 +78,11 @@
     .nav-none {
       display: none;
     }
+
+
   </style>
+
+  <script src="/javascript/teacher/Darkmode.js"></script>
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
     <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
       <div class="img-logo" style="display: flex;">
@@ -93,6 +97,8 @@
     </div>
     <div style="display: flex;">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
       <!-- Home -->
       <a href="/teacher/teacherhome.html" class="btn btn-dark"
         style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
@@ -345,7 +351,8 @@
               <a href="/teacher/CreateQR.html" class="btn btn-primary"
                 style="margin-bottom: 10px; width: 120px; height: 40px;"><i class="fa fa-qrcode" aria-hidden="true"></i>
                 Create-QR</a>
-              <a href="" class="btn btn-info" style="margin-bottom: 10px; width: 120px; height: 40px;"><i
+              <a href="https://firebasestorage.googleapis.com/v0/b/firetest-67b89.appspot.com/o/scedule.jpg?alt=media&token=3c4d1a07-e8ae-4b2f-8afd-a48b752dc7b9"
+                class="btn btn-info" style="margin-bottom: 10px; width: 120px; height: 40px;"><i
                   class='far fa-calendar-check'></i> Schedule</a>
             </div>
             <div style="display: flex;">
@@ -544,6 +551,7 @@
     .none {
       display: none;
     }
+
     .block {
       display: block;
     }
@@ -552,4 +560,5 @@
   </div>
   <script src="../javascript/teacher/home-teacher.js"></script>
 </body>
+
 </html>
