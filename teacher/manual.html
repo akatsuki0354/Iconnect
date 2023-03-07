@@ -20,71 +20,72 @@
 <body>
   <script>
     function notification() {
-         const text = document.getElementById("notification")
-         const body = document.getElementById("notification-nav")
- 
-         if (text.classList.contains('nav-none')) {
-           text.classList.remove('nav-none')
-           text.classList.add('.nav-block')
- 
-           body.classList.remove('nav-none')
-           body.classList.add('.nav-block')
-         }
-         else {
-           text.classList.remove('.nav-block')
-           text.classList.add('nav-none')
- 
-           body.classList.remove('.nav-block')
-           body.classList.add('nav-none')
-         }
- 
-       }
- </script>
- <style>
-  .nav-block{
-    display: block;
-  }
+      const text = document.getElementById("notification")
+      const body = document.getElementById("notification-nav")
 
-  .nav-none{
-    display: none;
-  }
-</style>
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
-  <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
-    <div class="img-logo" style="display: flex;">
-      <img src="/img/icon.png" alt="" style="width: 70px; height: 70px; margin-right: 10px;">
-      <div>
-        <h1>ICONnect</h1>
-        <p style="margin-top: -15px;">QR-Attendance Monitoring System</p>
+      if (text.classList.contains('nav-none')) {
+        text.classList.remove('nav-none')
+        text.classList.add('.nav-block')
+
+        body.classList.remove('nav-none')
+        body.classList.add('.nav-block')
+      }
+      else {
+        text.classList.remove('.nav-block')
+        text.classList.add('nav-none')
+
+        body.classList.remove('.nav-block')
+        body.classList.add('nav-none')
+      }
+
+    }
+  </script>
+  <style>
+    .nav-block {
+      display: block;
+    }
+
+    .nav-none {
+      display: none;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="display: flex; justify-content: space-between;">
+    <div style="display: flex; justify-content: space-between; color: rgb(231, 231, 231);">
+      <div class="img-logo" style="display: flex;">
+        <img src="/img/icon.png" alt="" style="width: 70px; height: 70px; margin-right: 10px;">
+        <div>
+          <h1>ICONnect</h1>
+          <p style="margin-top: -15px;">QR-Attendance Monitoring System</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="homepage" style="display: flex; justify-content: center;">
-  </div>
-  <div style="display: flex;">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Home -->
-     <a href="/teacher/teacherhome.html" class="btn btn-dark"
-     style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
-       style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
+    <div class="homepage" style="display: flex; justify-content: center;">
+    </div>
+    <div style="display: flex;">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Home -->
+      <a href="/teacher/teacherhome.html" class="btn btn-dark"
+        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-home "
+          style="font-size: 20px;" aria-hidden="true"><span class="span">Home</span></i></a>
 
-    <!-- Messanger -->
-    <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
-      style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
-        style="font-size: 20px;" aria-hidden="true"><span class="span"
-          style="margin-left: -55px;">Message</span></i></a>
-  
-         <!-- notification -->
-    <button onclick="notification()" class="btn btn-dark" style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
-      <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
-      <span
-        style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></button>
-        <!-- nav-notification  -->
-        <div id="notification"  class="triangle-up nav-none"></div>
-        <div id="notification-nav" class="notification-nav nav-none">
-         
-          <!-- notification-content -->
-         <div class="notification-content">
+      <!-- Messanger -->
+      <a href="/teacher/mscbot-main/mscbot/message.html" class="btn btn-dark"
+        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;"><i class="fa fa-comment  "
+          style="font-size: 20px;" aria-hidden="true"><span class="span"
+            style="margin-left: -55px;">Message</span></i></a>
+
+      <!-- notification -->
+      <button onclick="notification()" class="btn btn-dark"
+        style="margin-right: 10px; cursor: pointer; margin-top: 13px; height: 40px;">
+        <i><i class="material-icons">notifications</i> <span>Notification</span> </i>
+        <span
+          style="position: absolute; margin-top: -20px; background-color: red; width: 20px;border-radius: 100%;">1</span></button>
+      <!-- nav-notification  -->
+      <div id="notification" class="triangle-up nav-none"></div>
+      <div id="notification-nav" class="notification-nav nav-none">
+
+        <!-- notification-content -->
+        <div class="notification-content">
           <!-- title-->
           <div class="title">
             <h4>Notification</h4>
@@ -99,24 +100,24 @@
             <p>Hello <span id="teacherName"></span> You are now Register In to ICONnect</p>
           </div>
           <hr>
-         </div>
         </div>
-    <!-- nameof teacher -->
-    <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
-    <!-- Profile   -->
-    <div class="Profile">
-      <p style="margin-top: 20px;">
-        <i class="fa fa-user"></i>
-      </p>
-    </div>
-    <div class="dropdown">
-      <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
-          style='font-size:25px; margin-top: 10px;'></i></a>
-      <div class="dropdown-content">
+      </div>
+      <!-- nameof teacher -->
+      <h4 id="name" href="#" style="color: white; margin-right: 10px; margin-top: 16px;">ICONnect</h4>
+      <!-- Profile   -->
+      <div class="Profile">
+        <p style="margin-top: 20px;">
+          <i class="fa fa-user"></i>
+        </p>
+      </div>
+      <div class="dropdown">
+        <a id="signoutlink" class="nav-link" href=""><i class='fas fa-sign-out-alt'
+            style='font-size:25px; margin-top: 10px;'></i></a>
+        <div class="dropdown-content">
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
   <style>
     .navbar-select {
       width: 580px;
@@ -203,18 +204,20 @@
     }
   </style>
 
- <div class="title" style="display: flex; justify-content: space-between; margin-left: 30px;">
-  <h1 style="text-align: center;" class="text text-info">Manual Attendance</h1>
- </div>
+  <div class="title" style="display: flex; justify-content: space-between; margin-left: 30px;">
+    <h1 style="text-align: center;" class="text text-info">Manual Attendance</h1>
+  </div>
   <div class="main">
-   <!-- dashboard -->
+    <!-- dashboard -->
     <!-- dashboard -->
     <div class="navbar-select" id="navbar">
 
       <div class="img" style="display: flex; justify-content: center;">
         <div>
-          <div class="profile" style="z-index: 1; position: relative; width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
-            <img src="" alt="" style="position: relative; z-index: 1; width: 100px; height: 100px; border-radius: 100%;" id="myimg"  /><span id="extlab"></span>
+          <div class="profile"
+            style="z-index: 1; position: relative; width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+            <img src="" alt="" style="position: relative; z-index: 1; width: 100px; height: 100px; border-radius: 100%;"
+              id="myimg" /><span id="extlab"></span>
             <i class="fa fa-user"></i>
           </div>
           <div class="pulsar"></div>
@@ -226,16 +229,16 @@
         <input style="display: none;" type="text" id="youranme" placeholder="your file name">
         <button style="display: none;" id="retrieve">Retrieve</button>
         <script src="/javascript/teacher/teacherimage.js" type="module"></script>
-        <span id="progress"></span>      
+        <span id="progress"></span>
       </div>
       <!-- users -->
       <i class="fa fa-user" style="color: white; margin-left: 10px; font-size: 25px;"></i>
-      <span style="color: white;" id="hh" href="#" >ICONnect</span>
+      <span style="color: white;" id="hh" href="#">ICONnect</span>
       <hr>
       <!-- Home -->
-      <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a
-        href="/teacher/teacherhome.html"> Home</a></li>
-      
+      <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a href="/teacher/teacherhome.html">
+          Home</a></li>
+
       <hr>
       <!-- Manual -->
       <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
@@ -269,9 +272,9 @@
       }
     </script>
 
-<div onclick="navbar()" class="dashboard"
-style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: white; z-index: 2;"><i class="fa fa-bars"
-  style=" font-size: 25px;  padding: 5px;"> <span>Dashboard</span></i></div>
+    <div onclick="navbar()" class="dashboard"
+      style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: white; z-index: 2;"><i
+        class="fa fa-bars" style=" font-size: 25px;  padding: 5px;"> <span>Dashboard</span></i></div>
     <!-- table -->
     <div class="table section">
       <table class="table table-bordered table-primary" style="text-align: center; margin-top: 1px;">
@@ -290,15 +293,28 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
           <td>ICT 600</td>
           <td>8:30 A.M - 9:30 A.M</td>
         </tr>
+        <tr class="hover" onclick="StGuy()">
+          <td>ST. GUY</td>
+          <td>ICT 600</td>
+          <td>9:30 A.M - 10:30 A.M</td>
+        </tr>
+        <tr class="hover" onclick="SIDORE()">
+          <td>ST. ISIDORE</td>
+          <td>ICT 600</td>
+          <td>10:30 A.M - 11:30 A.M</td>
+        </tr>
       </table>
     </div><!-- searchbar -->
     <div class="searchbar">
       <div style="display: flex; gap: 5px;">
         <a href="/teacher/enroll.html" class="btn btn-success"
-          style="margin-bottom: 10px; width: 95px; height: 40px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll</a>
+          style="margin-bottom: 10px; width: 95px; height: 40px;"><i class="fa fa-user-plus" aria-hidden="true"></i>
+          Enroll</a>
         <a href="/teacher/CreateQR.html" class="btn btn-primary"
-          style="margin-bottom: 10px; width: 120px; height: 40px;"><i class="fa fa-qrcode" aria-hidden="true"></i> Create-QR</a>
-        <a href="" class="btn btn-info" style="margin-bottom: 10px; width: 120px; height: 40px;"><i class='far fa-calendar-check'></i> Schedule</a>
+          style="margin-bottom: 10px; width: 120px; height: 40px;"><i class="fa fa-qrcode" aria-hidden="true"></i>
+          Create-QR</a>
+        <a href="" class="btn btn-info" style="margin-bottom: 10px; width: 120px; height: 40px;"><i
+            class='far fa-calendar-check'></i> Schedule</a>
         <form class="d-flex">
           <input class="form-control me-2" type="search" style="width: 25vh;" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" style="height: 40px;" type="submit">Search</button>
@@ -306,29 +322,52 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
       </div>
 
       <script>
- function tableClicks() {
-    const angelo = document.getElementById("angelo");
+        function tableClicks() {
+          const angelo = document.getElementById("angelo");
 
-    if (angelo.classList.contains('none')) {
-      angelo.classList.add('block');
-      angelo.classList.remove('none');
-    } else {
-      angelo.classList.remove('block');
-      angelo.classList.add('none');
-    }
-  }
+          if (angelo.classList.contains('none')) {
+            angelo.classList.add('block');
+            angelo.classList.remove('none');
+          } else {
+            angelo.classList.remove('block');
+            angelo.classList.add('none');
+          }
+        }
 
-  function tableClick() {
-    const bernardin = document.getElementById("hi");
+        function tableClick() {
+          const bernardin = document.getElementById("hi");
 
-    if (bernardin.classList.contains('none')) {
-      bernardin.classList.remove('none');
-      bernardin.classList.add('block');
-    } else {
-      bernardin.classList.remove('block');
-      bernardin.classList.add('none');
-    }
-  }
+          if (bernardin.classList.contains('none')) {
+            bernardin.classList.remove('none');
+            bernardin.classList.add('block');
+          } else {
+            bernardin.classList.remove('block');
+            bernardin.classList.add('none');
+          }
+        }
+        function StGuy() {
+          const bernardin = document.getElementById("stGuy");
+
+          if (bernardin.classList.contains('none')) {
+            bernardin.classList.remove('none');
+            bernardin.classList.add('block');
+          } else {
+            bernardin.classList.remove('block');
+            bernardin.classList.add('none');
+          }
+        }
+
+        function ISIDORE() {
+          const bernardin = document.getElementById("ISIDORE");
+
+          if (bernardin.classList.contains('none')) {
+            bernardin.classList.remove('none');
+            bernardin.classList.add('block');
+          } else {
+            bernardin.classList.remove('block');
+            bernardin.classList.add('none');
+          }
+        }
       </script>
 
       <style>
@@ -341,8 +380,8 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
 
         }
       </style>
-      <div class="none" id="angelo">
-        <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
+      <div class="none" id="angelo" style=" overflow-y: scroll; height: 65vh; z-index: 99;">
+        <table class=" table table-bordered table-primary" style=" text-align: center; margin-top: 5px;">
           <div class="mt-3">
             <thead>
               <div class="name-section" style="display: flex; justify-content: space-between;">
@@ -365,7 +404,7 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
             <tbody id="child"></tbody>
           </div>
           <tr>
-            <td>Gregorio, Franco, M.</td>
+            <td>ACEDO, JAKE </td>
             <td><input type="checkbox">
 
             </td>
@@ -376,26 +415,303 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
             <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
           </tr>
           <tr>
-            <td>Gregorio, Franco, M.</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>
-              <p
-                style="position: absolute; background-color: red; width: 20px; height: 20px; margin-top: -10px; border-radius: 100%; color: white;">
-                1</p><button class="btn btn-primary"> View Excuse</button>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
             </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>AGUILAR, ELLAYSSA MAE D.</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>CENTENO, KAI</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>DELMONTE, JOSHUA</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>GREGORIO, FRANCO M.</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>MATEO, JAVIER</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>NUÑEZ, PRINCESS DIANNE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>OCAMPO,  ALFRANCIS</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>PASCUAL, CEDRICK</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>RODILLAS, JELANE </td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>SANTOS, JOSHUA</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>SOTELLO, EMJAY</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px; height: 40px;">
+                <p
+                  style="margin-left: -14px; position: relative; background-color: red; width: 20px; height: 20px; margin-top: -30px; margin-bottom: -8px; border-radius: 100%; color: white;">
+                  1</p>View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
             <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
           </tr>
         </table>
       </div>
-
-      <div class="none" id="hi">
-        <table class=" table table-bordered table-primary" style="text-align: center; margin-top: 5px;">
+      <!-- St.Bernardinbe -->
+      <div class="none" id="hi" style=" overflow-y: scroll; height: 65vh; z-index: 99;">
+        <table class=" table table-bordered table-primary" style=" text-align: center; margin-top: 5px;">
           <div class="mt-3">
             <thead>
               <div class="name-section" style="display: flex; justify-content: space-between;">
-                <h1>St.Bernadine</h1>
+                <h1>St. Bernardine</h1>
                 <div>
                   <button class="btn btn-dark">Male: 1</button>
                   <button class="btn btn-dark">Female: 0</button>
@@ -406,13 +722,17 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
               <th>Present</th>
               <th>Absent</th>
               <th>late</th>
-              <th>Excuse</th>
+              <th>Excuse
+
+              </th>
               <th>View Info</th>
             </thead>
             <tbody id="child"></tbody>
+
+         
           </div>
           <tr>
-            <td>Lucas, Grey L.</td>
+            <td>FERNANDEZ, DESIREE</td>
             <td><input type="checkbox">
 
             </td>
@@ -423,16 +743,484 @@ style="margin-top: -60px; cursor: pointer; position: absolute; left: 0; color: w
             <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
           </tr>
           <tr>
-            <td>Lucas, Grey L.</td>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <td><button class="btn btn-primary">View Excuse</button></td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>SANCHEZ, ELYZA MARIE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>SANTOS, CAMILLE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>TONOG, GINALYN </td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>VALDEZ, ERICA</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>CABAB, JOHNDALECLYDE </td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>CATACUTAN, LEMUEL</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>CORONEL, GUILLER</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>JABONITA, JAYSON</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>SOMIDO, JUSTINE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
             <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
           </tr>
         </table>
       </div>
+      <!-- st.Guy -->
+      <div class="none" id="stGuy" style=" overflow-y: scroll; height: 65vh; z-index: 99;">
+        <table class=" table table-bordered table-primary" style=" text-align: center; margin-top: 5px;">
+          <div class="mt-3">
+            <thead>
+              <div class="name-section" style="display: flex; justify-content: space-between;">
+                <h1>St. Guy</h1>
+                <div>
+                  <button class="btn btn-dark">Male: 1</button>
+                  <button class="btn btn-dark">Female: 0</button>
+                  <button class="btn btn-dark">Total: 1</button>
+                </div>
+              </div>
+              <th>Full Name</th>
+              <th>Present</th>
+              <th>Absent</th>
+              <th>late</th>
+              <th>Excuse
 
+              </th>
+              <th>View Info</th>
+            </thead>
+            <tbody id="child"></tbody>
+
+         
+          </div>
+          <tr>
+            <td>BANTOG, PATRICIA MARIZ</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>CATANIAG, ALEXANDRA MAE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>OREN, LOVELY JUSTINE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>PARANGUE, ROTCHEN</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>POLIQUIT, KARELLE</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>CABANGUNAY, RYAN</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>EVANGELISTA, AUSTIN CARL</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>JUELAR, PATRICK</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>SABLAYAN, BILLY JOEL</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+          <tr>
+            <td>VARGAS, LUIS HENDRIXON</td>
+            <td><input type="checkbox">
+
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox">
+            </td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-success">View Info</a></td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <button class="btn btn-primary" style="width: 130px;">
+              View Excuse
+              </button>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="/teacher/viewinfo.html" class="btn btn-info">Total: 0</a></td>
+          </tr>
+        </table>
+      </div>
 
 
       <table class="table table-bordered table-primary sticky" style="text-align: center; margin-top: 5px;">

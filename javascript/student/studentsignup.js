@@ -35,9 +35,9 @@ const email = document.getElementById('emailInp');
 const stdNo = document.getElementById('usernameInp');
 const password = document.getElementById('passInp');
 const submit = document.getElementById('submit');
-const FirstName = document.getElementById("FN")
+const FirstName = document.getElementById("firstname")
 const MiddleName = document.getElementById("MN")
-
+const passwordValidationMessage = document.getElementById('password-validation-message');
 // Validation
 
 function isEmptyOrSpaces(str) {
@@ -45,68 +45,98 @@ function isEmptyOrSpaces(str) {
 }
 
 
+
+
 function Validation() {
   let nameregex = /^[a-zA-Z\s]+$/;
-  let FirstNameregex = /^[a-zA-Z\s]+$/;
-  let MiddleNameregex = /^[a-zA-Z]+\s?\.?\s?[a-zA-Z]*$/;
   let emailgerex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
   let stdNoregex = /^[a-zA-Z0-9\-]{5,}$/;
   let passwordregex = /[a-zA-Z0-9]{8,}/;
 
-  if (isEmptyOrSpaces(name.value)) {
-    name.classList.add('invalid');
-    alert("Name is required");
+  if (isEmptyOrSpaces(FirstName.value)) {
+    FirstName.classList.add('invalid');
+    alert("First Name is required");
+    return false;
+  } else {
+    FirstName.classList.remove('invalid');
+  }
+  
+  if (!nameregex.test(FirstName.value)) {
+    nameregex.classList.add('invalid');
+    alert("Name should only contain alphabets and spaces");
     return false;
   }
+  else {
+    FirstName.classList.remove('invalid');
+  }
+
+  if (isEmptyOrSpaces(name.value)) {
+    name.classList.add('invalid');
+    alert("Last Name is required");
+    return false;
+  }else{
+    name.classList.remove('invalid');
+  }
+
   if (!nameregex.test(name.value)) {
     name.classList.add('invalid');
     alert("Name should only contain alphabets and spaces");
     return false;
+  }else{
+    name.classList.remove('invalid');
   }
 
   if (isEmptyOrSpaces(email.value)) {
     email.classList.add('invalid');
     alert("Email is required");
     return false;
+  }else{
+    email.classList.remove('invalid');
   }
   if (!emailgerex.test(email.value)) {
     email.classList.add('invalid');
     alert("Email is invalid. Please enter a valid email (gmail/yahoo/outlook)");
     return false;
+  }else{
+    email.classList.remove('invalid');
   }
 
   if (isEmptyOrSpaces(stdNo.value)) {
     stdNo.classList.add('invalid');
     alert("Student Number is required");
     return false;
+  }else{
+    stdNo.classList.remove('invalid');
   }
   if (!stdNoregex.test(stdNo.value)) {
     stdNo.classList.add('invalid');
     alert("Student Number should be at least 5 characters long");
     return false;
+  }else{
+    stdNo.classList.remove('invalid');
   }
 
   if (isEmptyOrSpaces(password.value)) {
     password.classList.add('invalid');
-    alert("Password is required");
+    passwordValidationMessage.style.display = 'block';
     return false;
-  }
-  if (!passwordregex.test(password.value)) {
-    password.classList.add('invalid');
-    alert("Password should be at least 8 characters long and can only contain alphabets and numbers");
-    return false;
-  }
-  if (!FirstNameregex.test(FirstName.value)) {
-    password.classList.add('invalid');
-    alert("Name should only contain alphabets and spaces");
-    return false;
-  } MiddleNameregex
-  if (!MiddleNameregex.test(MiddleName.value)) {
-    password.classList.add('invalid');
-    alert("Name should only contain alphabets and spaces");
-    return false;
-  }
-  return true;
+}else{
+  password.classList.remove('invalid');
+}
+
+if (!passwordregex.test(password.value)) {
+  password.classList.add('invalid');
+  passwordValidationMessage.style.display = 'block';
+  return false;
+}else {
+  password.classList.remove('invalid');
+  passwordValidationMessage.style.display = 'none';
+}
+
+
+
+
+return true;
 }
 
 // REGISTER USER TO FIREBASE

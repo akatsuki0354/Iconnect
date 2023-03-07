@@ -29,8 +29,9 @@
             <div class="text" style="display: flex; justify-content: center;">
                 <div class="">
                     <h1>ICON<span>nect</span></h1>
-                    <p style="font-family: cooper-black-std, serif;">QR-Attendance Monitoring System</p>
-                </div>
+                    <p style="font-family: cooper-black-std, serif; margin-bottom: -1px;">QR-Attendance Monitoring System</p>
+                    <span  style="text-align: center; margin-left: 10px; color: gray;">Please click the student Icon if you want to back in start</span>
+                        </div>
             </div>
         </div>
         <div class="form">
@@ -38,36 +39,79 @@
                 <div class="img">
                     <a href="../index.html"><img class="student__img" src="/img/students.png" alt="student__img"></a>
                 </div>
+
                 <h3>Student Sign Up</h3>
-                <i class="fa fa-user icon" style="font-size:26px"></i>
-                <input type="text" placeholder="Last Name" id="nameInp" class="input-field form-control mb-3">
-                <i class="fa fa-user icon" style="font-size:26px"></i>
-                <input type="text" placeholder="First Name" id="FN" class="input-field form-control mb-3">
-                <i class="fa fa-user icon" style="font-size:26px"></i>
-                <input type="text" placeholder="Middle Name" id="MN" class="input-field form-control mb-3">
-                <i class="fa fa-user icon" style="font-size:26px"></i>
-                <input type="text" placeholder="Student No." id="usernameInp" class="input-field form-control mb-3">
-                <i class="fa fa-envelope icon" style="font-size:20px; margin-top: 9px;"></i>
-                <input type="text" placeholder="Email" id="emailInp" class="input-field form-control mb-3">
-                <div onclick="Trigger()" class="icon-container">
-                    <i id="arrow" class="fa fa-eye-slash" style="margin-left: 220px; font-size: 20px;"></i>
+                <br>
+
+                <span style=" margin-left: -10px; ">(<span style=" color: red;">*</span>) indicates a required
+                    field.</span><br>
+              <br>
+                <div style="display: flex; gap: 20px;">
+                    <div>
+                        <i class="fa fa-user icon" style="font-size:26px"></i>
+                        <span style="position: absolute; margin-left: -10px; color: red;">*</span>
+                        <input type="text" placeholder="First Name" id="firstname" class="input-field form-control mb-3">
+                        <i class="fa fa-user icon" style="font-size:26px"></i>
+                        <input type="text" placeholder="Middle Name" id="MN" class="input-field form-control mb-3">
+                        <span style="position: absolute; margin-top: -18px;">(Leave it blank if not applicable to you)</span>
+                    
+                        <span style="position: absolute; margin-left: -10px; margin-top: 12px; color: red;">*</span>
+                        <i class="fa fa-user icon" style="font-size:26px; margin-top: 20px;"></i>
+                        <input type="text" placeholder="Last Name" id="nameInp" style="margin-top: 30px;" class="input-field form-control mb-3">
+                        <span style="position: absolute; margin-left: -10px; color: red;">*</span>
+                        <i class="fa fa-envelope icon" style="font-size:20px; margin-top: 9px;"></i>
+                        <span style="position: absolute; margin-left: -10px; color: red;">*</span>
+                        <input type="text" placeholder="Email" id="emailInp" class="input-field form-control mb-3">
+                        <i class="fa fa-user icon" style="font-size:26px"></i>
+                        <span style="position: absolute; margin-left: -10px; color: red;">*</span>
+                        <input type="text" placeholder="Student No." id="usernameInp"
+                            class="input-field form-control mb-3">
+                        <span style="position: absolute; margin-left: -10px; color: red;">*</span>
+                        <i class="fa fa-lock icon" style="font-size:26px"></i>
+                        <div onclick="Trigger()" class="icon-container">
+                            <i id="arrow" class="fa fa-eye-slash" style="margin-left: 220px; font-size: 20px;"></i>
+                        </div>
+                        <input type="password" placeholder="Password" id="passInp"
+                            class="input-field form-control mb-3">
+                    </div>
                 </div>
-                <i class="fa fa-lock icon" style="font-size:26px"></i>
-                <input type="password" placeholder="Password" id="passInp" class="input-field form-control mb-3">
+
+                <style>
+                    .block {
+                        display: block;
+                        color: red;
+                    }
+
+                    .none {
+                        display: none;
+                    }
+                </style>
+
+                <div class="none" style="color: red;" id="password-validation-message">
+                    Make a strong <strong>password</strong>
+                    <ul>
+                        <li>Must be at least 8 characters</li>
+                        <li>Cannot be more than 16 characters</li>
+                        <li>Must have at least 1 number</li>
+                        <li>Must have at least 1 UPPERCASE character</li>
+                        <li>Must have at least 1 lowercase character</li>
+                    </ul>
+
+                </div>
                 <button type="text" id="submit" class="btn btn-info mb-3">Sign Up</button>
                 <a href="/Student/studentlogin.html" class="text-info">I have an account?</a>
             </div>
         </div>
     </div>
 
-    <div>
+    <!-- <div>
         <p class="alert alert-info" style="text-align: center;">
 
             Please Fill the input, All input is Required
             To make Account And <br> Click the Student Icon if you want to
             Back to Start.
         </p>
-    </div>
+    </div> -->
 
     <script type="module" src="/javascript/student/studentsignup.js">
     </script>

@@ -47,7 +47,6 @@
             extlab.innerHTML = extension;
             reader.readAsDataURL(files[0]);
         };
-
         reader.onload = function () {
             myimg.src = reader.result;
         };
@@ -63,15 +62,12 @@
             const ext = temp.slice(temp.length - 1, temp.length);
             return "." + ext[0];
         }
-
         function getFileName(file) {
             const temp = file.name.split(".");
             const fname = temp.slice(0, -1).join(".");
             return fname;
         }
-
         //   uplaod process
-
         async function UploadProcess() {
             var ImgToUpload = files[0];
             var ImgNAme = namebox.value + extlab.innerHTML;
@@ -79,7 +75,6 @@
             const  metaData = {
                 contentType: ImgToUpload.type
             }
-
             const storage = getStorage();
 
             const StorageRef = sRef(storage, "Image/" + ImgNAme);
@@ -100,11 +95,8 @@
                 }
             )
         }
-
         // Firestore
         import { getFirestore, doc, getDoc, setDoc, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
-
-
         import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 
         async function SaveURLRealtimeDB(url) {
@@ -117,7 +109,7 @@
             await update(imageRef, {
                 ImageName: (name + ext),
                 ImageURL: url,
-                Yname: Yname.value
+                Yname: Yname.value,
             });
         }
 upload.onclick = UploadProcess;
