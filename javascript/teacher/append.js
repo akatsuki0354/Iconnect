@@ -34,7 +34,7 @@ var stdNo = 0;
 var tbody = document.getElementById('tbody1')
 function AddItemToTable(name, roll, Times) {
   let trow = document.createElement("tr");
-  let td1 = document.createElement('td');
+  let td1 = document.querySelector('.cusor.present');
   let td2 = document.createElement('td');
   let td3 = document.createElement('td');
 
@@ -42,6 +42,8 @@ function AddItemToTable(name, roll, Times) {
   td1.innerHTML = ++stdNo;
   td2.innerHTML = name;
   td3.innerHTML = roll;
+  td2. colSpan = "3";
+  td3.colSpan ="3";
   td3.setAttribute('data-time', Times);
 
   const timeParts = Times.split(':');
@@ -55,7 +57,7 @@ function AddItemToTable(name, roll, Times) {
   }
 
   
-  trow.appendChild(td1);
+ 
   trow.appendChild(td2);
   trow.appendChild(td3);
   
