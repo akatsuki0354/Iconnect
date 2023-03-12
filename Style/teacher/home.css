@@ -1,0 +1,203 @@
+nav .Profile{
+    width: 60px; 
+    height: 60px; 
+    text-align: center; 
+    border-radius: 100px;  
+    cursor: pointer; 
+    background-color: #ddd;
+    overflow: hidden;
+    border: solid 2px rgb(179, 179, 179);
+  }
+  
+  .dashboard span{
+    position: absolute;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 10px;
+   opacity: 0;
+   margin-left: 5px;
+   pointer-events: none;
+  }
+  nav .Profile i{
+    font-size: 50px;
+    margin-top: -10px;
+    color: gray;
+  }
+  
+  /* notification */
+  .notification-nav{
+    position: absolute;
+    top: 80px;
+    background-color: #ddd;
+    width: 285px;
+    height: 90vh;
+    margin-left: 20px;
+    overflow: scroll;
+    z-index: 99;
+    transition: 0.3s;
+  }
+  
+  .notification-content{
+    padding: 10px;
+  }
+  
+  .triangle-up {
+    position: absolute;
+    margin-left: 125px;
+    top: 70px;
+    z-index: 999;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid #ddd;
+  }
+  
+  /* DashBoard */
+  
+  #progress{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 80px;
+  }
+  
+  nav i{
+    text-align: center;
+  }
+  
+  nav i .span{
+    position: absolute;
+    margin-top: 30px;
+    width: 100px;
+    margin-left: -59px;
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  nav .btn i span{
+    position: absolute;
+    margin-top: 27px;
+    width: 100px;
+    margin-left: -59px;
+    padding: 10px;
+    font-size: 12px;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  
+  nav .btn:hover i span{
+    position: absolute;
+    margin-top: 27px;
+    width: 100px;
+    margin-left: -59px;
+    padding: 10px;
+    font-size: 12px;
+    opacity: 1;
+  }
+   
+  .navbar-select .img .profile {
+    border: solid 2px rgb(49, 49, 49);
+    overflow: hidden;
+  }
+  
+  .navbar-select .img .profile i{
+    font-size: 85px;
+    top: -85px;
+     
+    margin-left: 10px;
+    color: gray;
+    position: relative;
+  }
+  
+  .dashboard i:hover span{
+    opacity: 1;
+    font-size: 15px;
+    font-family: normal;
+    pointer-events: none;
+  }
+  
+  
+  .navbar-select  .fa-camera, .fa-upload{
+    position: relative;
+    z-index: 999;
+    top: 75px;
+    font-size: 15px;
+    margin-left: -30px;
+    color: rgb(228, 228, 228);
+    background-color: rgb(49, 49, 49);
+    padding: 5px;
+    height: 25px;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  
+  .fa-upload{
+    z-index: 1;
+    margin-left: -0px;
+  }
+  
+  .nav-fas{
+    background-color: rgb(7, 150, 150);
+    color: black;
+    padding: 2px;
+    padding-left: 20px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .fas{
+    margin-right: 5px;
+    color: white;
+  }
+  
+  .user{
+    display: none;
+  }
+  
+  /* .main table tr:hover{
+    background-color: rgba(1, 255, 255, 0.637);
+    color: black;
+  } */
+  table tr input:hover{
+   cursor: pointer;
+  }
+  
+  
+  .section .hover:hover{
+    background-color: rgb(109, 165, 165);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .section thead:hover{
+    background-color: transparent;
+    color: black;
+  }
+  
+  
+  
+  
+  .homepage a{
+    margin-left: 10px;
+  }
+  
+  /*search bar & table */
+  
+  .main{
+   display: flex;
+  }
+  
+  .table{
+   padding-right: 10px;
+   padding-top: 15px;
+  }
+  
+  .main .searchbar{
+    padding: 15px;
+  
+  }
+  
+  
+  

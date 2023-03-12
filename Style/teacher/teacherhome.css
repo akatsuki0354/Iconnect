@@ -31,7 +31,7 @@ nav .Profile i{
   background-color: #ddd;
   width: 285px;
   height: 90vh;
-  margin-left: 115px;
+  margin-left: 20px;
   overflow: scroll;
   z-index: 99;
   transition: 0.3s;
@@ -156,13 +156,19 @@ nav .btn:hover i span{
   display: none;
 }
 
-table tr td{
-  cursor: pointer;
+.main table tr:hover{
+  background-color: rgba(1, 255, 255, 0.637);
+  color: black;
 }
+table tr input:hover{
+ cursor: pointer;
+}
+
 
 .section .hover:hover{
   background-color: rgb(109, 165, 165);
   color: white;
+  cursor: pointer;
 }
 
 .section thead:hover{
