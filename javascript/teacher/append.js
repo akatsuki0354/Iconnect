@@ -34,16 +34,16 @@ var stdNo = 0;
 var tbody = document.getElementById('tbody1')
 function AddItemToTable(name, roll, Times) {
   let trow = document.createElement("tr");
-  let td1 = document.querySelector('.cusor.present');
+  
   let td2 = document.createElement('td');
   let td3 = document.createElement('td');
-
-  
+  let td1 = document.querySelector('.cusor.present');
   td1.innerHTML = ++stdNo;
+
   td2.innerHTML = name;
   td3.innerHTML = roll;
-  td2. colSpan = "3";
-  td3.colSpan ="3";
+  td2.colSpan = "3";
+  td3.colSpan = "3";
   td3.setAttribute('data-time', Times);
 
   const timeParts = Times.split(':');
@@ -52,12 +52,13 @@ function AddItemToTable(name, roll, Times) {
 
   if (hours === 4 && minutes >= 30 && minutes <= 32) {
     trow.classList.add('present');
+    
   } else if (hours === 4 && minutes >= 33 && minutes <= 50) {
     trow.classList.add('late');
   }
 
   
- 
+
   trow.appendChild(td2);
   trow.appendChild(td3);
   
