@@ -214,53 +214,56 @@
  
 
   <!-- dashboard -->
- <!-- dashboard -->
- <div class="left navbar-select" id="navbar">
+  <div class="navbar-select left" id="navbar">
 
-  <div class="img" style="display: flex; justify-content: center;">
-    <div>
-      <div class="profile" style="z-index: 1; position: relative; width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
-        <img src="" alt="" style="position: relative; z-index: 1; width: 100px; height: 100px; border-radius: 100%;" id="myimg"  /><span id="extlab"></span>
-        <i class="fa fa-user"></i>
+    <div class="img" style="display: flex; justify-content: center;">
+      <div>
+        <div class="profile"
+          style="z-index: 1; position: relative; width: 100px; height: 100px; background-color: azure; border-radius: 100%;">
+          <img src="" alt="" style="position: relative; z-index: 1; width: 100px; height: 100px; border-radius: 100%;"
+            id="myimg" /><span id="extlab"></span>
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="pulsar"></div>
       </div>
-      <div class="pulsar"></div>
+      <!-- upoload and select for profile -->
+      <label id="select"><i class="fa fa-camera" aria-hidden="true"></i></label>
+      <label id="upload"><i class="fa fa-upload" aria-hidden="true"></i></label>
+      <input style="display: none;" type="text" id="namebox" />
+      <input style="display: none;" type="text" id="youranme" placeholder="your file name">
+      <button style="display: none;" id="retrieve">Retrieve</button>
+      <script src="/javascript/teacher/teacherimage.js" type="module"></script>
+      <span id="progress"></span>
     </div>
-    <!-- upoload and select for profile -->
-    <label id="select"><i class="fa fa-camera" aria-hidden="true"></i></label>
-    <label id="upload"><i class="fa fa-upload" aria-hidden="true"></i></label>
-    <input style="display: none;" type="text" id="namebox" />
-    <input style="display: none;" type="text" id="youranme" placeholder="your file name">
-    <button style="display: none;" id="retrieve">Retrieve</button>
-    <script src="/javascript/teacher/teacherimage.js" type="module"></script>
-    <span id="progress"></span>      
-  </div>
-  <!-- users -->
- 
+    <!-- users -->
     <i class="fa fa-user" style="color: white; margin-left: 10px; font-size: 25px;"></i>
-    <span style="color: white;" id="hh" href="#" >ICONnect</span>
- 
-  <hr>
-  <!-- Home -->
-  <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a
-    href="/teacher/teacherhome.html"> Home</a></li>
-  
-  <hr>
-  <!-- Manual -->
-  <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
-      href="/teacher/manual.html">Manual</a></li>
-  <hr>
-  <!-- QR-Attendance -->
-  <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
-      href="QR-Attendance.html">QR-Attendance</a></li>
-  <hr>
-  <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
-      href="/teacher/settings.html">Settings</a></li>
-  <hr>
+    <span style="color: white;" id="hh" href="#">ICONnect</span>
+    <hr>
+    <!-- Home -->
+    <li><i class="fa fa-home" aria-hidden="true" style="font-size: 25px;"></i> <a href="/teacher/teacherhome.html">
+        Home</a></li>
 
-  <li style="display: none;">
-    <a id="userlink" class="nav-link user" href="">Username</a>
-  </li>
-</div>
+    <hr>
+    <!-- Manual -->
+    <li><i class="fa fa-book" aria-hidden="true" style="font-size: 25px;"></i> <a
+        href="/teacher/manual.html">Manual</a></li>
+    <hr>
+    <!-- QR-Attendance -->
+    <li><i class="fa fa-qrcode" aria-hidden="true" style="font-size: 25px;"></i> <a
+        href="QR-Attendance.html">QR-Attendance</a></li>
+    <hr>
+      <!-- summary -->
+      <li><a href="/teacher/Summary.html"><i class="fa fa-address-book" aria-hidden="true" style="font-size: 25px;"></i> Summary</a></li>
+      <hr>
+      <!-- settings -->
+    <li> <i class="fa fa-cog" aria-hidden="true" style="font-size: 25px;"></i> <a
+        href="/teacher/settings.html">Settings</a></li>
+    <hr>
+  
+    <li style="display: none;">
+      <a id="userlink" class="nav-link user" href="">Username</a>
+    </li>
+  </div>
   <script>
     function navbar() {
       const text = document.getElementById("navbar")
