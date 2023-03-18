@@ -1,3 +1,13 @@
+body{
+  background: rgba(255, 255, 255, 0.747) url('/img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+
+
 nav .Profile{
     width: 60px; 
     height: 60px; 

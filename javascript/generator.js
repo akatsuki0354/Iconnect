@@ -13,7 +13,7 @@ function generate(){
   downloadQrCode =function (el){  
     var canvas = document.getElementById("myCanvas");  
     var image = canvas.toDataURL("image/png");  
-    el.href = image;  
+    el.href = image;
   };  
   function canvasScreen() {  
     var a = document.getElementsByTagName("img")[0];  
